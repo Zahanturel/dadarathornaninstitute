@@ -1,30 +1,31 @@
 ---
 import PageLayout from '../components/PageLayout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const sections = [
   {
     title: 'Main Pages',
     links: [
-      { href: '/', label: 'Home' },
-      { href: '/history', label: 'History of the Institute' },
-      { href: '/activities', label: 'Institute Activities' },
-      { href: '/admissions', label: 'Admissions' },
-      { href: '/books', label: 'Books Available' },
-      { href: '/mandal', label: 'Athornan Mandal' },
-      { href: '/achievers', label: 'Achievers' },
-      { href: '/students', label: 'Current Students' },
-      { href: '/help', label: 'Help & Donate' },
-      { href: '/contact', label: 'Contact' },
+      { href: base || '/', label: 'Home' },
+      { href: `${base}/history`, label: 'History of the Institute' },
+      { href: `${base}/activities`, label: 'Institute Activities' },
+      { href: `${base}/admissions`, label: 'Admissions' },
+      { href: `${base}/books`, label: 'Books Available' },
+      { href: `${base}/mandal`, label: 'Athornan Mandal' },
+      { href: `${base}/achievers`, label: 'Achievers' },
+      { href: `${base}/students`, label: 'Current Students' },
+      { href: `${base}/help`, label: 'Help & Donate' },
+      { href: `${base}/contact`, label: 'Contact' },
     ],
   },
   {
     title: 'Downloads',
     links: [
-      { href: '/brochure-2022.pdf', label: 'Institute Brochure 2022 (PDF)', external: true },
-      { href: '/Alumni.pdf', label: 'Alumni List (PDF)', external: true },
-      { href: '/dai_alumni_complete_list_jul_12.xls', label: 'Alumni Complete List (XLS)', external: true },
-      { href: '/ex_students.pdf', label: 'Ex-Students List (PDF)', external: true },
-      { href: '/Notice-Change in FCRA Account number from July 2021.pdf', label: 'Notice: FCRA Account Change (PDF)', external: true },
+      { href: `${base}/brochure-2022.pdf`, label: 'Institute Brochure 2022 (PDF)', external: true },
+      { href: `${base}/Alumni.pdf`, label: 'Alumni List (PDF)', external: true },
+      { href: `${base}/dai_alumni_complete_list_jul_12.xls`, label: 'Alumni Complete List (XLS)', external: true },
+      { href: `${base}/ex_students.pdf`, label: 'Ex-Students List (PDF)', external: true },
+      { href: `${base}/Notice-Change in FCRA Account number from July 2021.pdf`, label: 'Notice: FCRA Account Change (PDF)', external: true },
     ],
   },
 ];
@@ -48,7 +49,7 @@ const sections = [
                 rel={link.external ? 'noopener' : undefined}
                 class="flex items-center gap-2 text-stone-700 hover:text-stone-900 hover:underline group text-sm"
               >
-                <svg class="w-4 h-4 text-stone-400 group-hover:text-amber-600 flex-shrink-0 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: inherit;">
+                <svg class="w-4 h-4 text-stone-400 flex-shrink-0 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
                 {link.label}

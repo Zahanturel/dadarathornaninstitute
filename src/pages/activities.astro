@@ -1,5 +1,6 @@
 ---
 import PageLayout from '../components/PageLayout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const years = [
   {
@@ -151,6 +152,6 @@ const years = [
   </div>
 
   <div class="mt-10 p-5 rounded-xl bg-stone-50 border border-stone-200 text-sm text-stone-600">
-    <p>For a full brochure of Institute activities, download the <a href="/brochure-2022.pdf" target="_blank" rel="noopener" class="font-medium hover:underline" style="color: #b45309;">2022 Brochure (PDF)</a>.</p>
+    <p>For a full brochure of Institute activities, download the <a href={`${base}/brochure-2022.pdf`} target="_blank" rel="noopener" class="font-medium hover:underline" style="color: #b45309;">2022 Brochure (PDF)</a>.</p>
   </div>
 </PageLayout>

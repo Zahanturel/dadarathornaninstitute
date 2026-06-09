@@ -1,4 +1,5 @@
 ---
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <footer style="background-color: #162d4a;" class="text-stone-300 mt-16">
@@ -27,11 +28,11 @@
       <div>
         <h3 class="text-white font-serif text-lg font-semibold mb-3">Quick Links</h3>
         <ul class="text-sm space-y-1">
-          <li><a href="/admissions" class="text-stone-400 hover:text-amber-400 transition-colors">Admissions</a></li>
-          <li><a href="/history" class="text-stone-400 hover:text-amber-400 transition-colors">History</a></li>
-          <li><a href="/help" class="text-stone-400 hover:text-amber-400 transition-colors">Help &amp; Donate</a></li>
-          <li><a href="/contact" class="text-stone-400 hover:text-amber-400 transition-colors">Contact</a></li>
-          <li><a href="/sitemap" class="text-stone-400 hover:text-amber-400 transition-colors">Sitemap</a></li>
+          <li><a href={`${base}/admissions`} class="text-stone-400 hover:text-amber-400 transition-colors">Admissions</a></li>
+          <li><a href={`${base}/history`} class="text-stone-400 hover:text-amber-400 transition-colors">History</a></li>
+          <li><a href={`${base}/help`} class="text-stone-400 hover:text-amber-400 transition-colors">Help &amp; Donate</a></li>
+          <li><a href={`${base}/contact`} class="text-stone-400 hover:text-amber-400 transition-colors">Contact</a></li>
+          <li><a href={`${base}/sitemap`} class="text-stone-400 hover:text-amber-400 transition-colors">Sitemap</a></li>
         </ul>
       </div>
     </div>

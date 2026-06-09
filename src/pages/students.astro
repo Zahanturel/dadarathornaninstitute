@@ -1,5 +1,6 @@
 ---
 import PageLayout from '../components/PageLayout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const schoolStudents = [
   { no: 1, name: 'Yazdan Firdosh Panthaki', std: 'II' },
@@ -62,7 +63,7 @@ const schoolStudents = [
 
     <div class="border-t border-stone-200 pt-6 flex flex-wrap gap-4">
       <a
-        href="/dai_alumni_complete_list_jul_12.xls"
+        href={`${base}/dai_alumni_complete_list_jul_12.xls`}
         target="_blank"
         rel="noopener"
         class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium text-white transition-all hover:opacity-90"
@@ -74,7 +75,7 @@ const schoolStudents = [
         Alumni Complete List (XLS)
       </a>
       <a
-        href="/ex_students.pdf"
+        href={`${base}/ex_students.pdf`}
         target="_blank"
         rel="noopener"
         class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-all hover:opacity-90 border"

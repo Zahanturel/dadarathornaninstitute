@@ -1,24 +1,29 @@
 ---
+// BASE_URL in Astro 4 has no trailing slash when base is set.
+// Always use `${base}/path` pattern.
+const base = import.meta.env.BASE_URL.replace(/\/$/, ''); // '/dadarathornaninstitute'
+
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/activities', label: 'Activities' },
-  { href: '/history', label: 'History' },
-  { href: '/admissions', label: 'Admissions' },
-  { href: '/books', label: 'Books' },
-  { href: '/mandal', label: 'Mandal' },
-  { href: '/achievers', label: 'Achievers' },
-  { href: '/students', label: 'Students' },
-  { href: '/help', label: 'Help & Donate' },
-  { href: '/contact', label: 'Contact' },
+  { href: base || '/', label: 'Home' },
+  { href: `${base}/activities`, label: 'Activities' },
+  { href: `${base}/history`, label: 'History' },
+  { href: `${base}/admissions`, label: 'Admissions' },
+  { href: `${base}/books`, label: 'Books' },
+  { href: `${base}/mandal`, label: 'Mandal' },
+  { href: `${base}/achievers`, label: 'Achievers' },
+  { href: `${base}/students`, label: 'Students' },
+  { href: `${base}/help`, label: 'Help & Donate' },
+  { href: `${base}/contact`, label: 'Contact' },
 ];
 
+// Normalise trailing slash for comparison
 const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
 ---
 
-<header class="bg-navy-800 sticky top-0 z-50 shadow-lg" style="background-color: #162d4a;">
+<header class="sticky top-0 z-50 shadow-lg" style="background-color: #162d4a;">
   <div class="max-w-7xl mx-auto px-4">
     <div class="flex items-center justify-between h-16">
-      <a href="/" class="flex items-center gap-3 group">
+      <a href={base || '/'} class="flex items-center gap-3 group">
         <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style="background-color: #b45309;">
           <span class="text-white font-serif font-bold text-lg">D</span>
         </div>
@@ -31,13 +36,14 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
       <!-- Desktop nav -->
       <nav class="hidden lg:flex items-center gap-1">
         {navLinks.map(link => {
-          const isActive = currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href));
+          const isActive = currentPath === link.href ||
+            (link.href !== (base || '/') && currentPath.startsWith(link.href));
           return (
             <a
               href={link.href}
               class={`px-3 py-2 rounded text-sm font-medium transition-colors duration-150 whitespace-nowrap ${
                 isActive
-                  ? 'text-amber-400 bg-white/10'
+                  ? 'bg-white/10'
                   : 'text-stone-300 hover:text-white hover:bg-white/10'
               }`}
               style={isActive ? 'color: #f59e0b;' : ''}
@@ -69,13 +75,14 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
   <div id="mobile-menu" class="lg:hidden hidden border-t border-white/10">
     <nav class="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-1">
       {navLinks.map(link => {
-        const isActive = currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href));
+        const isActive = currentPath === link.href ||
+          (link.href !== (base || '/') && currentPath.startsWith(link.href));
         return (
           <a
             href={link.href}
             class={`px-3 py-2 rounded text-sm font-medium transition-colors ${
               isActive
-                ? 'text-amber-400 bg-white/10'
+                ? 'bg-white/10'
                 : 'text-stone-300 hover:text-white hover:bg-white/10'
             }`}
             style={isActive ? 'color: #f59e0b;' : ''}
