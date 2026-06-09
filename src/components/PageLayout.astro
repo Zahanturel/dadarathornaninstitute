@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  pageTitle?: string;
+  pageSubtitle?: string;
+}
+
+const { title, description, pageTitle, pageSubtitle } = Astro.props;
+---
+
+<Layout title={title} description={description}>
+  <Header slot="header" />
+
+  {pageTitle && (
+    <div class="py-10 px-4" style="background: linear-gradient(135deg, #162d4a 0%, #1e3a5f 60%, #0a1628 100%);">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-white font-serif text-3xl sm:text-4xl font-semibold">{pageTitle}</h1>
+        {pageSubtitle && <p class="mt-2 text-stone-300 text-sm sm:text-base">{pageSubtitle}</p>}
+      </div>
+    </div>
+  )}
+
+  <div class="max-w-4xl mx-auto px-4 py-10">
+    <slot />
+  </div>
+
+  <Footer slot="footer" />
+</Layout>

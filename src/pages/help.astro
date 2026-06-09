@@ -1,0 +1,192 @@
+---
+import PageLayout from '../components/PageLayout.astro';
+---
+
+<PageLayout
+  title="Help & Donate"
+  description="Support the Dadar Athornan Institute through donations — sponsor a student, fund meals, or contribute to endowment funds."
+  pageTitle="Help &amp; Donate"
+  pageSubtitle="Support a century-old mission of Zoroastrian education"
+>
+  <article class="space-y-8">
+    <div class="text-stone-700 leading-relaxed space-y-4 text-justify">
+      <p>
+        The Dadar Athornan Institute is a public charitable Institution funded by donations from philanthropic individuals and Trusts. The accounts are duly audited every year by a reputed firm of Accountants.
+      </p>
+      <p>
+        Today more than ever, with the regularly increasing rate of inflation, the Institute seeks your support and patronage by way of generous donations, which may be made to particular schemes or earmarked funds.
+      </p>
+      <p>
+        In 2019, the Institute completed 100 years of service to the Community. The Institute continues to light the lamps of devotion and learning in the hearts of young priests and inspire them to tend the holy fires. We look forward to generous support from donors and patrons.
+      </p>
+    </div>
+
+    <!-- Donate CTA -->
+    <div class="rounded-xl p-8 text-center" style="background: linear-gradient(135deg, #162d4a 0%, #1e3a5f 100%);">
+      <h2 class="font-serif text-2xl font-semibold text-white mb-3">Make a Donation</h2>
+      <p class="text-stone-300 text-sm mb-6 max-w-md mx-auto">
+        Your donation directly sustains the education, boarding, and care of young Zoroastrian priests. All donations to Athornan Mandal are eligible for tax benefits.
+      </p>
+      <a
+        href="#donate"
+        class="inline-block px-8 py-3 rounded-lg font-semibold text-white transition-all duration-200 hover:opacity-90 text-lg"
+        style="background-color: #b45309;"
+      >
+        Donate Now
+      </a>
+    </div>
+
+    <!-- Donation Ways -->
+    <div>
+      <h2 class="font-serif text-2xl font-semibold mb-6" style="color: #162d4a;">Ways to Help</h2>
+      <div class="space-y-5">
+        <div class="p-5 rounded-xl border border-stone-200 bg-stone-50">
+          <h3 class="font-semibold text-stone-800 mb-2">Sponsoring a Student</h3>
+          <p class="text-stone-600 text-sm leading-relaxed">
+            On the basis of the expenses that the Institute annually incurs on a student, a student can be sponsored for a year by a donation of <strong>Rs. 2,00,000/-</strong> (Rupees Two lacs only).
+          </p>
+          <p class="text-stone-600 text-sm leading-relaxed mt-2">
+            The donor can also maintain an <strong>Endowment Fund</strong> by paying a sum of Rs. 20,00,000/- (Rupees Twenty lacs only), whereby a student will be educated in the name of the donor's family for a period of 10 years.
+          </p>
+          <p class="text-stone-600 text-sm leading-relaxed mt-2">
+            If the sponsorship is in memory of a departed one, the student recites the name of the deceased in regular rituals and prayers. He also prays the Tandarosti of the donor and his/her family.
+          </p>
+          <p class="text-stone-600 text-sm leading-relaxed mt-2">
+            Part sponsorship of a student (covering education but not boarding and lodging) is for <strong>Rs. 30,000/-</strong> per annum.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-xl border border-stone-200 bg-stone-50">
+          <h3 class="font-semibold text-stone-800 mb-2">Annual Baj-Rojgar Ceremonies Scheme</h3>
+          <p class="text-stone-600 text-sm leading-relaxed">
+            Afringan, Farokhshi, Baj and Stum (on fruits) are performed once a year by students for five years on the rojgar (death anniversary day) of a deceased person, for a donation of <strong>Rs. 50,000/-</strong>.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-xl border border-stone-200 bg-stone-50">
+          <h3 class="font-semibold text-stone-800 mb-2">Sponsoring a Meal</h3>
+          <p class="text-stone-600 text-sm leading-relaxed">
+            A donor can sponsor one meal for students. On festive occasions, students recite a Tandarosti. On death anniversaries a Stum (on fruits) is recited.
+          </p>
+          <ul class="text-stone-600 text-sm mt-2 space-y-1">
+            <li>Vegetarian meal: <strong>Rs. 3,000/-</strong></li>
+            <li>Non-vegetarian meal: <strong>Rs. 4,500/-</strong></li>
+            <li>Sweet-dish (pudding, custard, jelly etc.): additional Rs. 1,000/-</li>
+            <li>Ice-cream: additional Rs. 1,500/-</li>
+            <li>Breakfast: <strong>Rs. 1,000/-</strong></li>
+            <li>Evening snack: <strong>Rs. 4,000/-</strong></li>
+            <li>Outing (movie, snack and transport): <strong>Rs. 15,000/-</strong></li>
+          </ul>
+          <p class="text-stone-500 text-xs mt-2">Annual bookings of meals can also be made. Amounts may be revised due to inflation.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Earmarked Funds -->
+    <div>
+      <h2 class="font-serif text-2xl font-semibold mb-4" style="color: #162d4a;">Earmarked Funds</h2>
+      <div class="grid sm:grid-cols-2 gap-3">
+        {[
+          { num: 1, name: 'General Maintenance Fund', desc: 'Money can be utilized for any Institute related activity.' },
+          { num: 2, name: 'Food Fund', desc: 'Utilised towards providing food.' },
+          { num: 3, name: 'Milk Fund', desc: 'Utilised towards providing milk to students at breakfast.' },
+          { num: 4, name: 'Education Fund', desc: 'For educational expenses and tuition fees.' },
+          { num: 5, name: 'Book Fund', desc: 'Utilised towards purchasing text books and note books.' },
+          { num: 6, name: 'Library Fund', desc: 'For maintaining the Institute Library and purchasing books.' },
+          { num: 7, name: 'Medical Fund', desc: "For students' medical expenses and operating the Medicare Centre." },
+          { num: 8, name: 'Mobed Amelioration Fund', desc: 'For providing assistance to practicing and aged Mobeds all over India.' },
+          { num: 9, name: 'Athornan Mandal–WZO Scheme', desc: 'For providing monthly stipends and related benefits to working Mobeds all over India.' },
+        ].map(f => (
+          <div class="flex gap-3 p-3 rounded-lg bg-stone-50 border border-stone-200">
+            <span class="font-semibold text-stone-400 text-sm w-5 flex-shrink-0">{f.num})</span>
+            <div>
+              <p class="font-medium text-stone-800 text-sm">{f.name}</p>
+              <p class="text-stone-500 text-xs mt-0.5">{f.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- How to Donate -->
+    <div>
+      <h2 class="font-serif text-2xl font-semibold mb-4" style="color: #162d4a;">How to Donate</h2>
+      <p class="text-stone-600 text-sm mb-5">
+        Donations can be made either in cash or by Cheque, favouring <strong>Athornan Mandal</strong>, and sent to the addresses given below. The Athornan Mandal is also authorized to receive donations from abroad.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="p-5 rounded-xl border border-stone-200 bg-stone-50">
+          <h3 class="font-semibold text-stone-800 mb-3 text-sm">Direct donations (NEFT/RTGS) — from outside India</h3>
+          <table class="text-sm w-full">
+            <tbody class="divide-y divide-stone-200">
+              {[
+                ['Account Name', 'Athornan Mandal'],
+                ['A/c. No', '40227229015'],
+                ['SWIFT CODE', 'SBININBB104'],
+                ['IFSC Code', 'SBIN0000691'],
+                ['PURPOSE CODE', 'P1303'],
+                ['BRANCH CODE', '00691'],
+              ].map(([k, v]) => (
+                <tr>
+                  <td class="py-1.5 font-medium text-stone-600 pr-3 w-36">{k}</td>
+                  <td class="py-1.5 text-stone-800">{v}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <p class="text-xs text-stone-500 mt-3">
+            Address: FCRA Cell, 4th Floor, State Bank of India, New Delhi Main Branch, 11 Sansad Marg, New Delhi – 110001<br />
+            Tel: 011-23374390 / 4392 / 4143<br />
+            Email: <a href="mailto:fcra.00691@sbi.co.in" class="hover:underline" style="color: #b45309;">fcra.00691@sbi.co.in</a>
+          </p>
+        </div>
+
+        <div class="p-5 rounded-xl border border-stone-200 bg-stone-50">
+          <h3 class="font-semibold text-stone-800 mb-3 text-sm">Direct donations (NEFT/RTGS) — donors in India</h3>
+          <table class="text-sm w-full">
+            <tbody class="divide-y divide-stone-200">
+              {[
+                ['Account Name', 'Athornan Mandal'],
+                ['Saving Bank A/c. No', '007200100000785'],
+                ['IFSC', 'ZCBL0000007'],
+                ['Bank', 'Zoroastrian Co-operative Bank'],
+                ['Branch', 'Parsi Colony, Dadar (East), Mumbai 400 014'],
+                ['PAN No', 'AAATA0230A'],
+              ].map(([k, v]) => (
+                <tr>
+                  <td class="py-1.5 font-medium text-stone-600 pr-3 w-36">{k}</td>
+                  <td class="py-1.5 text-stone-800">{v}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact for Queries -->
+    <div class="p-6 rounded-xl border border-stone-200 bg-stone-50">
+      <h3 class="font-serif text-lg font-semibold mb-4" style="color: #162d4a;">For Any Further Queries</h3>
+      <div class="grid md:grid-cols-2 gap-6 text-sm text-stone-700">
+        <div>
+          <p class="font-semibold">1) The Principal</p>
+          <p class="text-stone-500 mt-1">Dadar Athornan Institute,<br />
+          651–52, Firdausi Road,<br />
+          Mancherji Joshi Parsi Colony,<br />
+          Dadar, Mumbai 400 014. INDIA.</p>
+          <p class="mt-2">Tel: +91-22-24138086</p>
+          <p>Email: <a href="mailto:info@dadarathornaninstitute.org" class="hover:underline" style="color: #b45309;">info@dadarathornaninstitute.org</a></p>
+        </div>
+        <div>
+          <p class="font-semibold">2) The Joint Honorary Secretaries</p>
+          <p class="text-stone-500 mt-1">Athornan Mandal,<br />
+          240, Navsari Bldg., 2nd Flr.,<br />
+          Dr. Dadabhai Navroji Road,<br />
+          Fort, Mumbai 400 001. INDIA.</p>
+          <p class="mt-2">Tel: +91-22-2207 0784</p>
+        </div>
+      </div>
+    </div>
+  </article>
+</PageLayout>

@@ -1,0 +1,67 @@
+---
+import PageLayout from '../components/PageLayout.astro';
+
+const sections = [
+  {
+    title: 'Main Pages',
+    links: [
+      { href: '/', label: 'Home' },
+      { href: '/history', label: 'History of the Institute' },
+      { href: '/activities', label: 'Institute Activities' },
+      { href: '/admissions', label: 'Admissions' },
+      { href: '/books', label: 'Books Available' },
+      { href: '/mandal', label: 'Athornan Mandal' },
+      { href: '/achievers', label: 'Achievers' },
+      { href: '/students', label: 'Current Students' },
+      { href: '/help', label: 'Help & Donate' },
+      { href: '/contact', label: 'Contact' },
+    ],
+  },
+  {
+    title: 'Downloads',
+    links: [
+      { href: '/brochure-2022.pdf', label: 'Institute Brochure 2022 (PDF)', external: true },
+      { href: '/Alumni.pdf', label: 'Alumni List (PDF)', external: true },
+      { href: '/dai_alumni_complete_list_jul_12.xls', label: 'Alumni Complete List (XLS)', external: true },
+      { href: '/ex_students.pdf', label: 'Ex-Students List (PDF)', external: true },
+      { href: '/Notice-Change in FCRA Account number from July 2021.pdf', label: 'Notice: FCRA Account Change (PDF)', external: true },
+    ],
+  },
+];
+---
+
+<PageLayout
+  title="Sitemap"
+  description="Sitemap of the Dadar Athornan Institute website."
+  pageTitle="Sitemap"
+>
+  <div class="space-y-10">
+    {sections.map(s => (
+      <section>
+        <h2 class="font-serif text-xl font-semibold mb-4" style="color: #162d4a;">{s.title}</h2>
+        <ul class="space-y-2">
+          {s.links.map(link => (
+            <li>
+              <a
+                href={link.href}
+                target={link.external ? '_blank' : undefined}
+                rel={link.external ? 'noopener' : undefined}
+                class="flex items-center gap-2 text-stone-700 hover:text-stone-900 hover:underline group text-sm"
+              >
+                <svg class="w-4 h-4 text-stone-400 group-hover:text-amber-600 flex-shrink-0 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: inherit;">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+                {link.label}
+                {link.external && (
+                  <svg class="w-3 h-3 text-stone-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                )}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </div>
+</PageLayout>

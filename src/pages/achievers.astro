@@ -1,0 +1,113 @@
+---
+import PageLayout from '../components/PageLayout.astro';
+
+const sscAchievers = [
+  { year: '1980', name: 'Ramiyar Parvez Karanjia', percent: '75.85' },
+  { year: '1983', name: 'Yezdi Dara Bamji', percent: '81.57' },
+  { year: '1984', name: 'Cyrus Dinshaw Darbari', percent: '84.57' },
+  { year: '1990', name: 'Darayus Parvez Bajan', percent: '79.42' },
+  { year: '1994', name: 'Marzee Maidhyomah Kerawala', percent: '77.14' },
+  { year: '2006', name: 'Yazad Kersi Mandviwala', percent: '82.13' },
+  { year: '2006', name: 'Eric Zarir Dastur', percent: '78.53' },
+  { year: '2010', name: 'Shehrezad Rohinton Pavri', percent: '94.00' },
+  { year: '2010', name: 'Rayan Darayus Dastur', percent: '77.09' },
+  { year: '2014', name: 'Kayomarz H. Panthaky', percent: '78.20' },
+  { year: '2015', name: 'Ardeshirshaw R. Nariman', percent: '81.00' },
+  { year: '2017', name: 'Farzan Kurush Dastur', percent: '86.40' },
+  { year: '2018', name: 'Shahvir Poras Panthaki', percent: '78.80' },
+  { year: '2019', name: 'Amavand Rumi Panthaky', percent: '78.00' },
+  { year: '2021', name: 'Shyamak Roomi Sanjana', percent: '81.60' },
+  { year: '2021', name: 'Persheus Yezdi Turel', percent: '81.00' },
+  { year: '2021', name: 'Sohrab Gustasp Vimadalal', percent: '80.20' },
+  { year: '2021', name: 'Zahan Meherzad Turel', percent: '74.60' },
+  { year: '2022', name: 'Karl Zubin Sidhwa', percent: '82.60' },
+  { year: '2022', name: 'Yazad Jangoo Broacha', percent: '80.40' },
+  { year: '2022', name: 'Fravash Mahernosh Gulestan', percent: '77.40' },
+  { year: '2023', name: 'Varzavand Hormaz Dadachanji', percent: '87.88' },
+  { year: '2023', name: 'Hormazd Kerman Fatakia', percent: '88.00' },
+];
+
+const nirangDin = [
+  { name: 'Burjor Faredun Aibada', count: 136, year: '1992' },
+  { name: 'Hoshedar Godrej Panthaki', count: 70, year: '1993' },
+  { name: 'Adil Jalejar Bhesania', count: 65, year: '1977' },
+  { name: 'Sheherazad Rohinton Pavri', count: 15, year: '2010' },
+  { name: 'Kaizad Meherwan Kotwal', count: 15, year: '1990' },
+  { name: 'Darayus Parvez Bajan', count: 11, year: '1990' },
+  { name: 'Khushravi Dara Palia', count: 9, year: '1997' },
+  { name: 'Khushru Dara Kanga', count: 50, year: '1993' },
+  { name: '(Late) Darayas Tehmton Karanjia', count: 4, year: '1989' },
+];
+---
+
+<PageLayout
+  title="Achievers"
+  description="Students of Dadar Athornan Institute who passed with distinction in SSC examinations, and top Nirang-din performers."
+  pageTitle="Achievers"
+  pageSubtitle="Students who excelled in academics and priestly service"
+>
+  <div class="space-y-12">
+    <!-- SSC Distinction Table -->
+    <section>
+      <h2 class="font-serif text-2xl font-semibold mb-2" style="color: #162d4a;">
+        SSC Distinction Students
+      </h2>
+      <p class="text-stone-500 text-sm mb-6">Students who passed with 75% and above at the SSC Examination</p>
+
+      <div class="overflow-x-auto rounded-xl border border-stone-200 shadow-sm">
+        <table class="w-full text-sm">
+          <thead>
+            <tr style="background-color: #162d4a; color: white;">
+              <th class="px-4 py-3 text-left font-medium w-20">Year</th>
+              <th class="px-4 py-3 text-left font-medium">Name</th>
+              <th class="px-4 py-3 text-center font-medium w-28">Percentage</th>
+            </tr>
+          </thead>
+          <tbody>
+            {sscAchievers.map((s, i) => (
+              <tr class={`border-b border-stone-100 ${i % 2 === 0 ? 'bg-white' : 'bg-stone-50'} hover:bg-amber-50 transition-colors`}>
+                <td class="px-4 py-3 font-semibold text-stone-500">{s.year}</td>
+                <td class="px-4 py-3 font-medium text-stone-800">{s.name}</td>
+                <td class="px-4 py-3 text-center">
+                  <span class={`inline-block px-2.5 py-0.5 rounded-full text-xs font-bold ${parseFloat(s.percent) >= 85 ? 'text-white' : 'text-stone-700 bg-amber-100'}`}
+                    style={parseFloat(s.percent) >= 85 ? 'background-color: #b45309; color: white;' : ''}>
+                    {s.percent}%
+                  </span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Nirang-din Table -->
+    <section>
+      <h2 class="font-serif text-2xl font-semibold mb-2" style="color: #162d4a;">
+        Top Nirang-din Performers
+      </h2>
+      <p class="text-stone-500 text-sm mb-6">Since 1966 — as on August 2022</p>
+
+      <div class="overflow-x-auto rounded-xl border border-stone-200 shadow-sm">
+        <table class="w-full text-sm">
+          <thead>
+            <tr style="background-color: #162d4a; color: white;">
+              <th class="px-4 py-3 text-left font-medium">Name</th>
+              <th class="px-4 py-3 text-center font-medium w-40">Nirang-dins Performed</th>
+              <th class="px-4 py-3 text-center font-medium w-32">Year of Passing</th>
+            </tr>
+          </thead>
+          <tbody>
+            {nirangDin.sort((a, b) => b.count - a.count).map((n, i) => (
+              <tr class={`border-b border-stone-100 ${i % 2 === 0 ? 'bg-white' : 'bg-stone-50'} hover:bg-amber-50 transition-colors`}>
+                <td class="px-4 py-3 font-medium text-stone-800">{n.name}</td>
+                <td class="px-4 py-3 text-center font-bold" style="color: #b45309;">{n.count}</td>
+                <td class="px-4 py-3 text-center text-stone-500">{n.year}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</PageLayout>
