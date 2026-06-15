@@ -18,6 +18,17 @@ const { title, description = 'Dadar Athornan Institute — Established 1919. Tra
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style is:global>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 5rem;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
 </head>
 <body class="bg-stone-50 text-stone-800 font-sans antialiased">
   <slot name="header" />

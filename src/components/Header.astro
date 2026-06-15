@@ -184,4 +184,13 @@ function groupActive(children: { href: string }[]) {
     iconClose?.classList.toggle('hidden', isOpen);
     toggle.setAttribute('aria-expanded', String(!isOpen));
   });
+
+  menu?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      menu?.classList.add('hidden');
+      iconOpen?.classList.remove('hidden');
+      iconClose?.classList.add('hidden');
+      toggle?.setAttribute('aria-expanded', 'false');
+    });
+  });
 </script>
