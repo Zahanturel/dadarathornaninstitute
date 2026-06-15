@@ -1,0 +1,39 @@
+---
+import PageLayout from '../components/PageLayout.astro';
+import { getLogo } from '../lib/data';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const logo = getLogo();
+---
+
+<PageLayout
+  title="Our Logo"
+  description="Explanation of the Dadar Athornan Institute logo — Afarganyu, chamach, gurz, and the watchwords Wisdom, Spirituality, Service."
+  pageTitle="Our Logo"
+  pageSubtitle={logo.author}
+>
+  <div class="space-y-8">
+    <div class="flex flex-col sm:flex-row items-center gap-8 p-6 rounded-xl bg-stone-50 border border-stone-200">
+      <img
+        src={`${base}/images/logo.jpg`}
+        alt="Dadar Athornan Institute logo"
+        class="w-48 h-48 object-contain rounded-lg"
+        width="192"
+        height="192"
+      />
+      <div class="text-center sm:text-left">
+        <p class="font-serif text-lg font-semibold" style="color: #162d4a;">{logo.title}</p>
+        <p class="text-stone-500 text-sm mt-2">By {logo.author}</p>
+        <div class="flex flex-wrap gap-2 mt-4 justify-center sm:justify-start">
+          {logo.watchwords.map((word) => (
+            <span class="px-3 py-1 rounded-full text-sm font-medium text-white" style="background-color: #b45309;">{word}</span>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <article class="text-stone-700 leading-relaxed space-y-4 text-justify">
+      {logo.paragraphs.map((p) => <p>{p}</p>)}
+    </article>
+  </div>
+</PageLayout>

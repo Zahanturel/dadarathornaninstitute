@@ -1,38 +1,40 @@
 ---
 import PageLayout from '../components/PageLayout.astro';
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+import { getStudentList, getCurrentStudentYear, getArchivedStudentYears } from '../lib/data';
 
-const schoolStudents = [
-  { no: 1, name: 'Yazdan Firdosh Panthaki', std: 'II' },
-  { no: 2, name: 'Pashaang Daraius Karanjia', std: 'IV' },
-  { no: 3, name: 'Delyaz Marzban Panthaky', std: 'IV' },
-  { no: 4, name: 'Kaiwan Kurush Sidhwa', std: 'IV' },
-  { no: 5, name: 'Huzan Zubin Engineer', std: 'V' },
-  { no: 6, name: 'Ziyan Zubin Nalladaru', std: 'VI' },
-  { no: 7, name: 'Maidyarem Kaizad Chinoy', std: 'VII' },
-  { no: 8, name: 'Aryameher Ruzbe Ruwala', std: 'VII' },
-  { no: 9, name: 'Barjis Kobad Bharda', std: 'VIII' },
-  { no: 10, name: 'Shahan Hoshang Bhesadia', std: 'VIII' },
-  { no: 11, name: 'Zhian Meherzad Turel', std: 'VIII' },
-  { no: 12, name: 'Sarosh Khushru Bharucha', std: 'IX' },
-  { no: 13, name: 'Farsogar Jal Bhesadia', std: 'X' },
-  { no: 14, name: 'Shyamak Rumi Sanjana', std: 'FY-BAF' },
-];
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const currentYear = getCurrentStudentYear();
+const studentData = getStudentList(currentYear);
+const archives = getArchivedStudentYears();
 ---
 
 <PageLayout
   title="Students"
-  description="Current list of students at Dadar Athornan Institute studying in the D.P.Y.A. High School — year 2023–24."
+  description={`Current list of students at Dadar Athornan Institute — academic year ${studentData.label}.`}
   pageTitle="Current Students"
-  pageSubtitle="Academic year 2023–24"
+  pageSubtitle={studentData.label}
 >
   <div class="space-y-8">
     <div class="text-center">
       <h2 class="font-serif text-xl font-semibold mb-1" style="color: #162d4a;">
         List of Students of Dadar Athornan Institute
       </h2>
-      <p class="text-stone-500 text-sm">Studying in the D.P.Y.A. High School — Year 2023–24</p>
+      <p class="text-stone-500 text-sm">{studentData.schoolLabel}</p>
     </div>
+
+    {archives.length > 0 && (
+      <div class="flex flex-wrap gap-2 justify-center text-sm">
+        <span class="text-stone-500">Archive:</span>
+        {archives.map((a) => (
+          <a
+            href={`${base}/students/${a.id}`}
+            class="px-3 py-1 rounded-full border border-stone-300 text-stone-600 hover:border-amber-600 hover:text-amber-700 transition-colors"
+          >
+            {a.label}
+          </a>
+        ))}
+      </div>
+    )}
 
     <section>
       <h3 class="font-semibold text-stone-700 text-sm uppercase tracking-wide mb-3">School Students</h3>
@@ -46,7 +48,7 @@ const schoolStudents = [
             </tr>
           </thead>
           <tbody>
-            {schoolStudents.map((s, i) => (
+            {studentData.students.map((s, i) => (
               <tr class={`border-b border-stone-100 ${i % 2 === 0 ? 'bg-white' : 'bg-stone-50'} hover:bg-amber-50 transition-colors`}>
                 <td class="px-4 py-3 text-stone-500 font-medium">{s.no}.</td>
                 <td class="px-4 py-3 font-medium text-stone-800">{s.name}</td>
@@ -58,7 +60,7 @@ const schoolStudents = [
           </tbody>
         </table>
       </div>
-      <p class="text-right text-sm text-stone-500 mt-3 font-medium">Total: Fourteen (14) students</p>
+      <p class="text-right text-sm text-stone-500 mt-3 font-medium">Total: Fourteen ({studentData.total}) students</p>
     </section>
 
     <div class="border-t border-stone-200 pt-6 flex flex-wrap gap-4">

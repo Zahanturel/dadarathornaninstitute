@@ -1,0 +1,78 @@
+{
+  "year": "2023-24",
+  "label": "Academic year 2023-24",
+  "schoolLabel": "Studying in the D.P.Y.A. High School — Year 2023-24",
+  "students": [
+    {
+      "no": 1,
+      "name": "Yazdan Firdosh Panthaki",
+      "std": "II"
+    },
+    {
+      "no": 2,
+      "name": "Pashaang Daraius Karanjia",
+      "std": "IV"
+    },
+    {
+      "no": 3,
+      "name": "Delyaz Marzban Panthaky",
+      "std": "IV"
+    },
+    {
+      "no": 4,
+      "name": "Kaiwan Kurush Sidhwa",
+      "std": "IV"
+    },
+    {
+      "no": 5,
+      "name": "Huzan Zubin Engineer",
+      "std": "V"
+    },
+    {
+      "no": 6,
+      "name": "Ziyan Zubin Nalladaru",
+      "std": "VI"
+    },
+    {
+      "no": 7,
+      "name": "Maidyarem Kaizad Chinoy",
+      "std": "VII"
+    },
+    {
+      "no": 8,
+      "name": "Aryameher Ruzbe Ruwala",
+      "std": "VII"
+    },
+    {
+      "no": 9,
+      "name": "Barjis Kobad Bharda",
+      "std": "VIII"
+    },
+    {
+      "no": 10,
+      "name": "Shahan Hoshang Bhesadia",
+      "std": "VIII"
+    },
+    {
+      "no": 11,
+      "name": "Zhian Meherzad Turel",
+      "std": "VIII"
+    },
+    {
+      "no": 12,
+      "name": "Sarosh Khushru Bharucha",
+      "std": "IX"
+    },
+    {
+      "no": 13,
+      "name": "Farsogar Jal Bhesadia",
+      "std": "X"
+    },
+    {
+      "no": 14,
+      "name": "Shyamak Rumi Sanjana",
+      "std": "FY-BAF"
+    }
+  ],
+  "total": 14
+}

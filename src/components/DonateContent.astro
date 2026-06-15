@@ -1,0 +1,125 @@
+---
+import { getSchemes } from '../lib/data';
+
+const schemes = getSchemes();
+---
+
+<article class="space-y-8">
+  <div class="text-stone-700 leading-relaxed space-y-4 text-justify">
+    {schemes.intro.map((p) => <p>{p}</p>)}
+  </div>
+
+  <div id="donate" class="rounded-xl p-8 text-center scroll-mt-24" style="background: linear-gradient(135deg, #162d4a 0%, #1e3a5f 100%);">
+    <h2 class="font-serif text-2xl font-semibold text-white mb-3">Make a Donation</h2>
+    <p class="text-stone-300 text-sm mb-6 max-w-md mx-auto">
+      Your donation directly sustains the education, boarding, and care of young Zoroastrian priests. All donations to Athornan Mandal are eligible for tax benefits.
+    </p>
+    <a
+      href="#how-to-donate"
+      class="inline-block px-8 py-3 rounded-lg font-semibold text-white transition-all duration-200 hover:opacity-90 text-lg"
+      style="background-color: #b45309;"
+    >
+      How to Donate
+    </a>
+  </div>
+
+  <div>
+    <h2 class="font-serif text-2xl font-semibold mb-6" style="color: #162d4a;">Ways to Help</h2>
+    <div class="space-y-5">
+      {schemes.schemes.map((scheme) => (
+        <div class="p-5 rounded-xl border border-stone-200 bg-stone-50">
+          <h3 class="font-semibold text-stone-800 mb-2">{scheme.title}</h3>
+          {scheme.paragraphs?.map((p) => (
+            <p class="text-stone-600 text-sm leading-relaxed mt-2">{p}</p>
+          ))}
+          {scheme.items && (
+            <ul class="text-stone-600 text-sm mt-2 space-y-1">
+              {scheme.items.map((item) => (
+                <li>{item.label}: <strong>{item.amount}</strong></li>
+              ))}
+            </ul>
+          )}
+          {scheme.footnote && (
+            <p class="text-stone-500 text-xs mt-2">{scheme.footnote}</p>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <div>
+    <h2 class="font-serif text-2xl font-semibold mb-4" style="color: #162d4a;">Earmarked Funds</h2>
+    <div class="grid sm:grid-cols-2 gap-3">
+      {schemes.earmarkedFunds.map((f) => (
+        <div class="flex gap-3 p-3 rounded-lg bg-stone-50 border border-stone-200">
+          <span class="font-semibold text-stone-400 text-sm w-5 flex-shrink-0">{f.num})</span>
+          <div>
+            <p class="font-medium text-stone-800 text-sm">{f.name}</p>
+            <p class="text-stone-500 text-xs mt-0.5">{f.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <div id="how-to-donate">
+    <h2 class="font-serif text-2xl font-semibold mb-4" style="color: #162d4a;">How to Donate</h2>
+    <p class="text-stone-600 text-sm mb-5">{schemes.bankDetails.intro}</p>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="p-5 rounded-xl border border-stone-200 bg-stone-50">
+        <h3 class="font-semibold text-stone-800 mb-3 text-sm">{schemes.bankDetails.international.title}</h3>
+        <table class="text-sm w-full">
+          <tbody class="divide-y divide-stone-200">
+            {schemes.bankDetails.international.fields.map(([k, v]) => (
+              <tr>
+                <td class="py-1.5 font-medium text-stone-600 pr-3 w-36">{k}</td>
+                <td class="py-1.5 text-stone-800">{v}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <p class="text-xs text-stone-500 mt-3">{schemes.bankDetails.international.note}</p>
+      </div>
+
+      <div class="p-5 rounded-xl border border-stone-200 bg-stone-50">
+        <h3 class="font-semibold text-stone-800 mb-3 text-sm">{schemes.bankDetails.india.title}</h3>
+        <table class="text-sm w-full">
+          <tbody class="divide-y divide-stone-200">
+            {schemes.bankDetails.india.fields.map(([k, v]) => (
+              <tr>
+                <td class="py-1.5 font-medium text-stone-600 pr-3 w-36">{k}</td>
+                <td class="py-1.5 text-stone-800">{v}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="mt-6 p-4 rounded-lg bg-amber-50 border border-amber-200 text-sm text-stone-700">
+      <strong>Receipt:</strong> {schemes.bankDetails.receiptInstructions}
+    </div>
+  </div>
+
+  <div class="p-6 rounded-xl border border-stone-200 bg-stone-50">
+    <h3 class="font-serif text-lg font-semibold mb-4" style="color: #162d4a;">For Any Further Queries</h3>
+    <div class="grid md:grid-cols-2 gap-6 text-sm text-stone-700">
+      {schemes.contacts.map((c, i) => (
+        <div>
+          <p class="font-semibold">{i + 1}) {c.role}</p>
+          {c.name && c.role !== c.name && <p class="font-medium mt-1">{c.name}</p>}
+          <p class="text-stone-500 mt-1">
+            {c.address.map((line) => <span>{line}<br /></span>)}
+          </p>
+          {c.tel && <p class="mt-2">Tel: {c.tel}</p>}
+          {c.email && (
+            <p>
+              Email: <a href={`mailto:${c.email}`} class="hover:underline" style="color: #b45309;">{c.email}</a>
+            </p>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</article>

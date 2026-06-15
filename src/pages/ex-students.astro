@@ -1,0 +1,45 @@
+---
+import PageLayout from '../components/PageLayout.astro';
+import { getExStudents } from '../lib/data';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const data = getExStudents();
+---
+
+<PageLayout
+  title="Ex-Students"
+  description="Information about ex-students of Dadar Athornan Institute — careers and present status."
+  pageTitle="Ex-Students"
+  pageSubtitle={`Information as on ${data.updated}`}
+>
+  <div class="space-y-6">
+    <div class="p-4 rounded-lg bg-stone-50 border border-stone-200 text-sm text-stone-600">
+      {data.note} Email <a href="mailto:info@dadarathornaninstitute.org" class="hover:underline" style="color: #b45309;">info@dadarathornaninstitute.org</a> or call +91-22-2413 8086.
+    </div>
+
+    <div class="overflow-x-auto rounded-xl border border-stone-200 shadow-sm">
+      <table class="w-full text-sm" id="ex-students-table">
+        <thead>
+          <tr style="background-color: #162d4a; color: white;">
+            <th class="px-4 py-3 text-left font-medium w-28">Years</th>
+            <th class="px-4 py-3 text-left font-medium w-48">Name</th>
+            <th class="px-4 py-3 text-left font-medium">Present Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.students.map((s, i) => (
+            <tr class={`border-b border-stone-100 ${i % 2 === 0 ? 'bg-white' : 'bg-stone-50'}`}>
+              <td class="px-4 py-3 text-stone-500 whitespace-nowrap">{s.years}</td>
+              <td class="px-4 py-3 font-medium text-stone-800">{s.name}</td>
+              <td class="px-4 py-3 text-stone-600">{s.status}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <p class="text-sm text-stone-500">
+      Legacy PDF list also available on the <a href={`${base}/downloads`} class="hover:underline" style="color: #b45309;">Downloads</a> page.
+    </p>
+  </div>
+</PageLayout>

@@ -1,0 +1,32 @@
+{
+  "downloads": [
+    {
+      "category": "Institute Publications",
+      "items": [
+        { "label": "Institute Brochure 2022 (PDF)", "href": "/brochure-2022.pdf", "external": true }
+      ]
+    },
+    {
+      "category": "Alumni & Students",
+      "items": [
+        { "label": "Alumni Complete List (XLS)", "href": "/dai_alumni_complete_list_jul_12.xls", "external": true },
+        { "label": "Alumni List (PDF)", "href": "/Alumni.pdf", "external": true },
+        { "label": "Ex-Students List (PDF — legacy)", "href": "/ex_students.pdf", "external": true }
+      ]
+    },
+    {
+      "category": "Notices",
+      "items": [
+        { "label": "Notice: FCRA Account Change from July 2021 (PDF)", "href": "/Notice-Change in FCRA Account number from July 2021.pdf", "external": true }
+      ]
+    },
+    {
+      "category": "Syllabus",
+      "items": [
+        { "label": "Syllabus — Bhantar (DOC)", "href": "/downloads/syllabus/Syllabus-Bhantar.DOC", "external": true },
+        { "label": "Syllabus — Iranian History (DOC)", "href": "/downloads/syllabus/Syllabus-Iranian-History.DOC", "external": true },
+        { "label": "Syllabus — Zoroastrian Religion (DOC)", "href": "/downloads/syllabus/Syllabus-Zoroastrian-Religion.DOC", "external": true }
+      ]
+    }
+  ]
+}

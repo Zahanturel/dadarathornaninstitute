@@ -1,0 +1,30 @@
+---
+import PageLayout from '../components/PageLayout.astro';
+import { getGallery } from '../lib/data';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const gallery = getGallery();
+---
+
+<PageLayout
+  title="Photo Gallery"
+  description="Photographs of the Dadar Athornan Institute — building, campus, and historical images."
+  pageTitle="Photo Gallery"
+  pageSubtitle="The Institute through the years"
+>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    {gallery.photos.map((photo) => (
+      <figure class="rounded-xl overflow-hidden border border-stone-200 bg-white shadow-sm">
+        <img
+          src={`${base}${photo.src.replace(/^\//, '')}`}
+          alt={photo.alt}
+          class="w-full h-56 object-cover"
+          loading="lazy"
+          width="600"
+          height="224"
+        />
+        <figcaption class="px-4 py-3 text-sm text-stone-600">{photo.caption}</figcaption>
+      </figure>
+    ))}
+  </div>
+</PageLayout>

@@ -1,0 +1,97 @@
+{
+  "updated": "June 2026",
+  "intro": [
+    "The Dadar Athornan Institute is a public charitable Institution funded by donations from philanthropic individuals and Trusts. The accounts are duly audited every year by a reputed firm of Accountants.",
+    "Today more than ever, with the regularly increasing rate of inflation, the Institute seeks your support and patronage by way of generous donations, which may be made to particular schemes or earmarked funds.",
+    "In 2019, the Institute completed 100 years of service to the Community. The Institute continues to light the lamps of devotion and learning in the hearts of young priests and inspire them to tend the holy fires. We look forward to generous support from donors and patrons."
+  ],
+  "schemes": [
+    {
+      "id": "sponsor-student",
+      "title": "Sponsoring a Student",
+      "paragraphs": [
+        "On the basis of the expenses that the Institute annually incurs on a student, a student can be sponsored for a year by a donation of Rs. 2,00,000/- (Rupees Two lacs only).",
+        "The donor can also maintain an Endowment Fund by paying a sum of Rs. 20,00,000/- (Rupees Twenty lacs only), whereby a student will be educated in the name of the donor's family for a period of 10 years.",
+        "If the sponsorship is in memory of a departed one, the student recites the name of the deceased. They also pray the Tandarosti of the donor and his/her family.",
+        "Part sponsorship of a student, that covers just the education and not the boarding and lodging, is for Rs. 50,000/- per annum."
+      ]
+    },
+    {
+      "id": "baj-rojgar",
+      "title": "Annual Baj-Rojgar Ceremonies Scheme",
+      "paragraphs": [
+        "Afringan, Farokhshi, Baj and Stum (on fruits) are performed once a year by students for five years on the rojgar (death anniversary day) of a deceased person, for a donation of Rs. 60,000/-."
+      ]
+    },
+    {
+      "id": "sponsor-meal",
+      "title": "Sponsoring a Meal",
+      "paragraphs": [
+        "A donor can sponsor one meal for students. On festive occasions, students recite a Tandarosti. On death anniversaries a Stum (on fruits) is recited."
+      ],
+      "items": [
+        { "label": "Vegetarian meal", "amount": "Rs. 4,000/-" },
+        { "label": "Non-vegetarian meal", "amount": "Rs. 4,500/-" },
+        { "label": "Sweet-dish (pudding, custard, jelly etc.)", "amount": "additional Rs. 1,000/-" },
+        { "label": "Ice-cream", "amount": "additional Rs. 1,500/-" },
+        { "label": "Breakfast", "amount": "Rs. 1,500/-" },
+        { "label": "Evening snack", "amount": "Rs. 4,000/-" },
+        { "label": "Outing (movie, snack and transport)", "amount": "Rs. 15,000/-" }
+      ],
+      "footnote": "Annual bookings of meals can also be made. Owing to inflation, the above amounts may be revised from time to time."
+    }
+  ],
+  "earmarkedFunds": [
+    { "num": 1, "name": "General Maintenance Fund", "desc": "Money can be utilized for any Institute related activity." },
+    { "num": 2, "name": "Food Fund", "desc": "Utilised towards providing food." },
+    { "num": 3, "name": "Milk Fund", "desc": "Utilised towards providing milk to students at breakfast." },
+    { "num": 4, "name": "Education Fund", "desc": "For educational expenses and tuition fees." },
+    { "num": 5, "name": "Book Fund", "desc": "Utilised towards purchasing text books and note books." },
+    { "num": 6, "name": "Library Fund", "desc": "For maintaining the Institute Library and purchasing books for the same." },
+    { "num": 7, "name": "Medical Fund", "desc": "For students' medical expenses and operating the Medicare Centre." },
+    { "num": 8, "name": "Mobed Amelioration Fund", "desc": "For assistance to practicing and aged Mobeds all over India." },
+    { "num": 9, "name": "Athornan Mandal-WZO Scheme", "desc": "For providing benefits to working Mobeds all over India." }
+  ],
+  "bankDetails": {
+    "intro": "Donations can be made either in cash or by Cheque, favouring Athornan Mandal. The Athornan Mandal is also authorized to receive donations from abroad.",
+    "international": {
+      "title": "Direct donations (NEFT/RTGS) — from outside India",
+      "fields": [
+        ["Account Name", "Athornan Mandal"],
+        ["A/c. No", "40227229015"],
+        ["SWIFT CODE", "SBININBB104"],
+        ["IFSC Code", "SBIN0000691"],
+        ["PURPOSE CODE", "P1303"],
+        ["BRANCH CODE", "00691"]
+      ],
+      "note": "Address: FCRA Cell, 4th Floor, State Bank of India, New Delhi Main Branch, 11 Sansad Marg, New Delhi – 110001. Tel: 011-23374390 / 4392 / 4143. Email: fcra.00691@sbi.co.in"
+    },
+    "india": {
+      "title": "Direct donations (NEFT/RTGS) — donors in India",
+      "fields": [
+        ["Account Name", "Athornan Mandal"],
+        ["Saving Bank A/c. No", "007200100000785"],
+        ["IFSC", "ZCBL0000007"],
+        ["Bank", "The Zoroastrian Co-operative Bank Ltd, Dadar"],
+        ["Branch", "Parsi Colony, Dadar (East), Mumbai 400 014"],
+        ["PAN No", "AAATA0230A"]
+      ]
+    },
+    "receiptInstructions": "After the funds are transferred to the bank, please send us your name, phone number, PAN card number (for Indian donors, if the donation exceeds Rs. 10,000) and address to info@dadarathornaninstitute.org, so that we can send you the receipt. You may also inform us on +91-22-2413 8086. Our postal address is 651-52, Firdausi Road, Parsi Colony, Dadar (E), Mumbai 400014, India."
+  },
+  "contacts": [
+    {
+      "role": "The Principal",
+      "name": "Er. Dr. Ramiyar P. Karanjia",
+      "address": ["Dadar Athornan Institute,", "651–52, Firdausi Road,", "Mancherji Joshi Parsi Colony,", "Dadar, Mumbai 400 014. INDIA."],
+      "tel": "+91-22-2413 8086",
+      "email": "info@dadarathornaninstitute.org"
+    },
+    {
+      "role": "The Joint Honorary Secretaries",
+      "name": "Athornan Mandal",
+      "address": ["240, Navsari Bldg., 2nd Flr.,", "Dr. Dadabhai Navroji Road,", "Fort, Mumbai 400 001. INDIA."],
+      "tel": "+91-22-2207 0784"
+    }
+  ]
+}

@@ -1,130 +1,16 @@
 ---
 import PageLayout from '../components/PageLayout.astro';
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+import { getActivities } from '../lib/data';
 
-const years = [
-  {
-    year: '2022–23',
-    items: [
-      'NEW ADMISSIONS: June 2022: 1) Huzan Zubin Engineer (Std. IV) from Pune and 2) Behzad Dara Bharda (Std. II) from Udwada.',
-      'SSC 2022: Karl Z. Sidhwa (82.60%), Yazad J. Broacha (80.40%), Fravash M. Gulestan (77.40%). Er. Karl Sidhwa stood second in SSC among all Parsi students of the DPYA High School.',
-      'Navar ceremonies conducted for students during the year.',
-      'Annual Jashan celebrated with full priestly rituals.',
-      'Prize-giving ceremony held to felicitate students for academic and scriptural achievements.',
-    ],
-  },
-  {
-    year: '2021–22',
-    items: [
-      'SSC 2021: Shyamak R. Sanjana (81.60%), Persheus Y. Turel (81.00%), Sohrab G. Vimadalal (80.20%), Zahan M. Turel (74.60%).',
-      'New admissions taken in June 2021.',
-      'Annual Jashan and prize-giving ceremony conducted.',
-      'Religious and Avesta classes continued throughout the year.',
-    ],
-  },
-  {
-    year: '2019',
-    items: [
-      'SSC 2019: Amavand Rumi Panthaky (78.00%).',
-      'CENTENARY YEAR: The Institute celebrated 100 years of service to the Zoroastrian community in 2019.',
-      'Special centenary programmes and events held.',
-      'Annual Jashan, prize distribution and cultural programmes organised.',
-    ],
-  },
-  {
-    year: '2018',
-    items: [
-      'SSC 2018: Shahvir Poras Panthaki (78.80%).',
-      'Navar ceremony conducted.',
-      'Annual Jashan celebrated with priestly rituals performed by students.',
-      'Prize-giving and cultural event held at the Institute.',
-    ],
-  },
-  {
-    year: '2017',
-    items: [
-      'SSC 2017: Farzan Kurush Dastur (86.40%).',
-      'Annual activities including Jashan, prize-giving ceremony and cultural programmes.',
-      'New admissions taken in June 2017.',
-    ],
-  },
-  {
-    year: '2016',
-    items: [
-      'Annual Jashan and prize-giving ceremony held.',
-      'Religious education and scriptural training continued.',
-      'Cultural and recreational activities organised for students.',
-    ],
-  },
-  {
-    year: '2015',
-    items: [
-      'SSC 2015: Ardeshirshaw R. Nariman (81.00%).',
-      'Annual Jashan and prize distribution held.',
-      'New admissions in June 2015.',
-    ],
-  },
-  {
-    year: '2014',
-    items: [
-      'SSC 2014: Kayomarz H. Panthaky (78.20%).',
-      'Annual Jashan celebrated.',
-      'Prize-giving ceremony and cultural events held.',
-    ],
-  },
-  {
-    year: '2013',
-    items: [
-      'Annual Jashan, prize-giving ceremony and cultural programmes.',
-      'Religious education, Avesta classes and scriptural training continued.',
-    ],
-  },
-  {
-    year: '2012',
-    items: [
-      'Annual Jashan and prize-giving ceremony held.',
-      'Cultural and recreational activities organised.',
-      'New admissions taken in June 2012.',
-    ],
-  },
-  {
-    year: '2011',
-    items: [
-      'Annual Jashan celebrated with full priestly rituals.',
-      'Prize-giving ceremony held.',
-      'Religious knowledge classes and scriptural training continued.',
-    ],
-  },
-  {
-    year: '2010',
-    items: [
-      'SSC 2010: Shehrezad Rohinton Pavri (94.00%), Rayan Darayus Dastur (77.09%).',
-      'Annual Jashan and prize distribution held.',
-      'New admissions taken in June 2010.',
-    ],
-  },
-  {
-    year: '2009',
-    items: [
-      'Annual Jashan and prize-giving ceremony held.',
-      'Cultural and religious activities continued throughout the year.',
-    ],
-  },
-  {
-    year: '2008',
-    items: [
-      'Annual Jashan, prize-giving ceremony and cultural programmes.',
-      'Scriptural training and religious education continued.',
-    ],
-  },
-];
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const years = getActivities();
 ---
 
 <PageLayout
-  title="Activities"
+  title="Annual Reports"
   description="Annual activities and events of the Dadar Athornan Institute — academic results, Navar ceremonies, Jashans, and more."
-  pageTitle="Institute Activities"
-  pageSubtitle="Annual reports and highlights"
+  pageTitle="Annual Reports"
+  pageSubtitle="Institute activities by year"
 >
   <div class="space-y-3">
     {years.map((y, i) => (
@@ -139,10 +25,10 @@ const years = [
         </summary>
         <div class="px-5 pb-5 pt-2 border-t border-stone-100">
           <ul class="space-y-2">
-            {y.items.map(item => (
+            {y.items.map((item) => (
               <li class="flex gap-3 text-sm text-stone-700 leading-relaxed">
                 <span class="flex-shrink-0 mt-1.5 w-1.5 h-1.5 rounded-full" style="background-color: #b45309;"></span>
-                <span set:html={item.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')} />
+                <span>{item}</span>
               </li>
             ))}
           </ul>
@@ -152,6 +38,6 @@ const years = [
   </div>
 
   <div class="mt-10 p-5 rounded-xl bg-stone-50 border border-stone-200 text-sm text-stone-600">
-    <p>For a full brochure of Institute activities, download the <a href={`${base}/brochure-2022.pdf`} target="_blank" rel="noopener" class="font-medium hover:underline" style="color: #b45309;">2022 Brochure (PDF)</a>.</p>
+    <p>For additional publications, see the <a href={`${base}/downloads`} class="font-medium hover:underline" style="color: #b45309;">Downloads</a> page including the <a href={`${base}/brochure-2022.pdf`} target="_blank" rel="noopener" class="font-medium hover:underline" style="color: #b45309;">2022 Brochure (PDF)</a>.</p>
   </div>
 </PageLayout>

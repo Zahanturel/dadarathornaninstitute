@@ -1,0 +1,32 @@
+{
+  "title": "SSC Distinction Students",
+  "subtitle": "Students who passed with 75% and above at the SSC Examination — till June 2026",
+  "achievers": [
+    { "year": "1980", "name": "Ramiyar Parvez Karanjia", "percent": "75.85" },
+    { "year": "1983", "name": "Yezdi Dara Bamji", "percent": "81.57" },
+    { "year": "1984", "name": "Cyrus Dinshaw Darbari", "percent": "84.57" },
+    { "year": "1990", "name": "Darayus Parvez Bajan", "percent": "79.42" },
+    { "year": "1994", "name": "Marzee Maidhyomah Kerawala", "percent": "77.14" },
+    { "year": "2006", "name": "Yazad Kersi Mandviwala", "percent": "82.13" },
+    { "year": "2006", "name": "Eric Zarir Dastur", "percent": "78.53" },
+    { "year": "2010", "name": "Sheherazad Rohinton Pavri", "percent": "94.00" },
+    { "year": "2010", "name": "Rayan Darayus Dastur", "percent": "77.09" },
+    { "year": "2014", "name": "Kayomarz H. Panthaky", "percent": "78.20" },
+    { "year": "2015", "name": "Ardeshirshaw R. Nariman", "percent": "81.00" },
+    { "year": "2017", "name": "Farzan Kurush Dastur", "percent": "86.40" },
+    { "year": "2018", "name": "Shahvir Poras Panthaki", "percent": "78.80", "note": "LD" },
+    { "year": "2019", "name": "Amavand Rumi Panthaky", "percent": "78.00" },
+    { "year": "2021", "name": "Shyamak Rumi Sanjana", "percent": "81.60" },
+    { "year": "2021", "name": "Persheus Yezdi Turel", "percent": "81.00", "note": "LD" },
+    { "year": "2021", "name": "Sohrab Gustasp Vimadalal", "percent": "80.20" },
+    { "year": "2021", "name": "Zahan Meherzad Turel", "percent": "74.60" },
+    { "year": "2022", "name": "Karl Zubin Sidhwa", "percent": "82.60" },
+    { "year": "2022", "name": "Yazad Jangoo Broacha", "percent": "80.40" },
+    { "year": "2022", "name": "Fravash Mahernosh Gulestan", "percent": "77.40" },
+    { "year": "2023", "name": "Varzavand Hormaz Dadachanji", "percent": "87.88" },
+    { "year": "2023", "name": "Hormazd Kerman Fatakia", "percent": "88.00", "note": "LD" },
+    { "year": "2024", "name": "Farsogar J. Bhesadia", "percent": "89.60", "note": "LD" },
+    { "year": "2025", "name": "Sarosh K. Bharucha", "percent": "93.00", "note": "LD" },
+    { "year": "2026", "name": "Zhiyan M. Turel", "percent": "84.00" }
+  ]
+}

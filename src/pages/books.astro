@@ -1,33 +1,8 @@
 ---
 import PageLayout from '../components/PageLayout.astro';
+import { getBooks, langLabel } from '../lib/data';
 
-const books = [
-  { no: 1, title: 'Afargan, Farokhshi, Afrin & All Khshnuman', lang: 'G', price: '300' },
-  { no: 2, title: 'Geh sarna prayers', lang: 'G', price: '50' },
-  { no: 3, title: 'Nuptial Blessings - Lagan na Ashirwad', lang: 'EG', price: '100' },
-  { no: 4, title: 'Yazashne Concise', lang: 'E', price: '300' },
-  { no: 5, title: 'Yazashne Full', lang: 'E', price: '500' },
-  { no: 6, title: 'Yazashne Full', lang: 'G', price: '300' },
-  { no: 7, title: 'Vendidad', lang: 'E', price: '500' },
-  { no: 8, title: 'Vendidad', lang: 'G', price: '500' },
-  { no: 9, title: 'Farokhshi', lang: 'G', price: '100' },
-  { no: 10, title: 'Farokhshi', lang: 'E', price: '100' },
-  { no: 11, title: 'Tamam khordeh Avesta', lang: 'G', price: '300' },
-  { no: 12, title: 'History of Athornan Mandal by R.P. Karanjia', lang: '', price: '200' },
-  { no: 13, title: 'History of Dadar Athornan Institute by R.P. Karanjia', lang: '', price: '200' },
-  { no: 14, title: 'Outlines of Parsi History by H.K. Mirza', lang: '', price: '500' },
-  { no: 15, title: 'My God – Ahura Mazda (Children\'s activity book) by R.P. Karanjia', lang: '', price: '300' },
-  { no: 16, title: 'My Prophet – Zarathushtra (Children\'s activity book) by R.P. Karanjia', lang: '', price: '300' },
-  { no: 17, title: 'Stories from the Iranian Epic-Shahnameh (Peshdad) by R.P. Karanjia', lang: '', price: '300' },
-  { no: 18, title: 'Stories from the Iranian Epic-Shahnameh (Kayan) by R.P. Karanjia', lang: '', price: '500' },
-  { no: 19, title: 'A Treasury of Zoroastrian Quotations by JJ Modi (Tr: R.P. Karanjia)', lang: '', price: '300' },
-];
-
-const langLabel: Record<string, string> = {
-  'E': 'English',
-  'G': 'Gujarati',
-  'EG': 'English & Gujarati',
-};
+const booksData = getBooks();
 ---
 
 <PageLayout
@@ -51,7 +26,7 @@ const langLabel: Record<string, string> = {
         </tr>
       </thead>
       <tbody>
-        {books.map((book, i) => (
+        {booksData.books.map((book, i) => (
           <tr class={`border-b border-stone-100 ${i % 2 === 0 ? 'bg-white' : 'bg-stone-50'} hover:bg-amber-50 transition-colors`}>
             <td class="px-4 py-3 text-stone-500 font-medium">{book.no}.</td>
             <td class="px-4 py-3 text-stone-800 font-medium">{book.title}</td>
@@ -69,11 +44,14 @@ const langLabel: Record<string, string> = {
     </table>
   </div>
 
-  <div class="mt-8 p-5 rounded-xl bg-stone-50 border border-stone-200">
+  <div class="mt-8 p-5 rounded-xl bg-stone-50 border border-stone-200 space-y-3">
+    <p class="text-sm text-stone-600 leading-relaxed">
+      {booksData.note}
+    </p>
     <p class="text-sm text-stone-600 leading-relaxed">
       To purchase books or enquire about availability, please contact the Institute directly.
     </p>
-    <div class="mt-3 flex flex-wrap gap-4 text-sm">
+    <div class="flex flex-wrap gap-4 text-sm">
       <a href="tel:+912224138086" class="font-medium hover:underline" style="color: #b45309;">+91-22-2413 8086</a>
       <a href="mailto:info@dadarathornaninstitute.org" class="font-medium hover:underline" style="color: #b45309;">info@dadarathornaninstitute.org</a>
     </div>

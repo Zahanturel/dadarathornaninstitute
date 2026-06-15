@@ -6,4 +6,7 @@ export default defineConfig({
   base: '/dadarathornaninstitute',
   integrations: [tailwind()],
   output: 'static',
+  redirects: {
+    '/help': '/donate',
+  },
 });

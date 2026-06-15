@@ -1,0 +1,31 @@
+{
+  "updated": "June 2026",
+  "note": "There is no facility to courier the books. The books have to be bought from the Institute at Dadar.",
+  "langCodes": {
+    "E": "English",
+    "G": "Gujarati",
+    "EG": "English & Gujarati"
+  },
+  "books": [
+    { "no": 1, "title": "Afargan, Farokhshi, Afrin & All Khshnuman", "lang": "G", "price": "300" },
+    { "no": 2, "title": "Geh sarna prayers", "lang": "G", "price": "50" },
+    { "no": 3, "title": "Nuptial Blessings - Lagan na Ashirwad", "lang": "EG", "price": "100" },
+    { "no": 4, "title": "Yazashne Concise", "lang": "E", "price": "300" },
+    { "no": 5, "title": "Yazashne Full", "lang": "E", "price": "500" },
+    { "no": 6, "title": "Yazashne Full", "lang": "G", "price": "400" },
+    { "no": 7, "title": "Vendidad", "lang": "E", "price": "500" },
+    { "no": 8, "title": "Vendidad", "lang": "G", "price": "500" },
+    { "no": 9, "title": "Farokhshi", "lang": "G", "price": "100" },
+    { "no": 10, "title": "Farokhshi", "lang": "E", "price": "100" },
+    { "no": 11, "title": "Tamam khordeh Avesta", "lang": "G", "price": "500" },
+    { "no": 12, "title": "Tamam khordeh Avesta", "lang": "E", "price": "900" },
+    { "no": 13, "title": "History of Athornan Mandal by R.P. Karanjia", "lang": "", "price": "200" },
+    { "no": 14, "title": "History of Dadar Athornan Institute by R.P. Karanjia", "lang": "", "price": "200" },
+    { "no": 15, "title": "Outlines of Parsi History by H.K. Mirza", "lang": "", "price": "500" },
+    { "no": 16, "title": "My God – Ahura Mazda (Children's activity book) by R.P. Karanjia", "lang": "", "price": "300" },
+    { "no": 17, "title": "My Prophet – Zarathushtra (Children's activity book) by R.P. Karanjia", "lang": "", "price": "300" },
+    { "no": 18, "title": "Stories from the Iranian Epic-Shahnameh (Peshdad) by R.P. Karanjia", "lang": "", "price": "300" },
+    { "no": 19, "title": "Stories from the Iranian Epic-Shahnameh (Kayan) by R.P. Karanjia", "lang": "", "price": "500" },
+    { "no": 20, "title": "A Treasury of Zoroastrian Quotations by JJ Modi (Tr: R.P. Karanjia)", "lang": "", "price": "300" }
+  ]
+}

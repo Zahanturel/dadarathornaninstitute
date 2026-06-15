@@ -1,0 +1,11 @@
+{
+  "photos": [
+    { "src": "/images/gallery/madressa-building.jpg", "alt": "Dadar Athornan Institute — Madressa building", "caption": "The Institute building, Dadar Parsi Colony" },
+    { "src": "/images/gallery/madressa-2.jpg", "alt": "Dadar Athornan Institute building", "caption": "Institute premises" },
+    { "src": "/images/gallery/madressa-main.jpg", "alt": "Dadar Athornan Institute", "caption": "Dadar Athornan Institute" },
+    { "src": "/images/gallery/institute-1.jpg", "alt": "Institute view", "caption": "Institute view" },
+    { "src": "/images/gallery/institute-2.jpg", "alt": "Institute view", "caption": "Institute campus" },
+    { "src": "/images/gallery/institute-3.jpg", "alt": "Institute view", "caption": "Institute campus" },
+    { "src": "/images/gallery/group-photo-1983.jpg", "alt": "Dadar Madressa Group Photo April 1983", "caption": "Dadar Madressa Group Photo — April 1983" }
+  ]
+}

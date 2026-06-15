@@ -4,28 +4,44 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const sections = [
   {
-    title: 'Main Pages',
+    title: 'Main',
     links: [
       { href: base || '/', label: 'Home' },
-      { href: `${base}/history`, label: 'History of the Institute' },
-      { href: `${base}/activities`, label: 'Institute Activities' },
+      { href: `${base}/donate`, label: 'Donate & Support' },
       { href: `${base}/admissions`, label: 'Admissions' },
-      { href: `${base}/books`, label: 'Books Available' },
-      { href: `${base}/mandal`, label: 'Athornan Mandal' },
-      { href: `${base}/achievers`, label: 'Achievers' },
-      { href: `${base}/students`, label: 'Current Students' },
-      { href: `${base}/help`, label: 'Help & Donate' },
       { href: `${base}/contact`, label: 'Contact' },
     ],
   },
   {
-    title: 'Downloads',
+    title: 'The Institute',
     links: [
+      { href: `${base}/history`, label: 'History of the Institute' },
+      { href: `${base}/logo`, label: 'Our Logo' },
+      { href: `${base}/gallery`, label: 'Photo Gallery' },
+      { href: `${base}/mandal`, label: 'Athornan Mandal' },
+      { href: `${base}/education`, label: 'Education & Syllabus' },
+    ],
+  },
+  {
+    title: 'Community',
+    links: [
+      { href: `${base}/achievers`, label: 'Rituals & Academics — Achievers' },
+      { href: `${base}/students`, label: 'Current Students (2025–26)' },
+      { href: `${base}/students/2023-24`, label: 'Students Archive (2023–24)' },
+      { href: `${base}/ex-students`, label: 'Ex-Students' },
+      { href: `${base}/books`, label: 'Books for Sale' },
+    ],
+  },
+  {
+    title: 'Reports & Downloads',
+    links: [
+      { href: `${base}/activities`, label: 'Annual Reports' },
+      { href: `${base}/downloads`, label: 'Downloads Index' },
       { href: `${base}/brochure-2022.pdf`, label: 'Institute Brochure 2022 (PDF)', external: true },
-      { href: `${base}/Alumni.pdf`, label: 'Alumni List (PDF)', external: true },
       { href: `${base}/dai_alumni_complete_list_jul_12.xls`, label: 'Alumni Complete List (XLS)', external: true },
+      { href: `${base}/Alumni.pdf`, label: 'Alumni List (PDF)', external: true },
       { href: `${base}/ex_students.pdf`, label: 'Ex-Students List (PDF)', external: true },
-      { href: `${base}/Notice-Change in FCRA Account number from July 2021.pdf`, label: 'Notice: FCRA Account Change (PDF)', external: true },
+      { href: `${base}/Notice-Change in FCRA Account number from July 2021.pdf`, label: 'FCRA Account Change Notice (PDF)', external: true },
     ],
   },
 ];
@@ -33,15 +49,15 @@ const sections = [
 
 <PageLayout
   title="Sitemap"
-  description="Sitemap of the Dadar Athornan Institute website."
+  description="Complete sitemap of the Dadar Athornan Institute website."
   pageTitle="Sitemap"
 >
   <div class="space-y-10">
-    {sections.map(s => (
+    {sections.map((s) => (
       <section>
         <h2 class="font-serif text-xl font-semibold mb-4" style="color: #162d4a;">{s.title}</h2>
         <ul class="space-y-2">
-          {s.links.map(link => (
+          {s.links.map((link) => (
             <li>
               <a
                 href={link.href}
@@ -49,7 +65,7 @@ const sections = [
                 rel={link.external ? 'noopener' : undefined}
                 class="flex items-center gap-2 text-stone-700 hover:text-stone-900 hover:underline group text-sm"
               >
-                <svg class="w-4 h-4 text-stone-400 flex-shrink-0 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-4 h-4 text-stone-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
                 {link.label}
