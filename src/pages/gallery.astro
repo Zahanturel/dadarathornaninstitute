@@ -16,7 +16,7 @@ const gallery = getGallery();
     {gallery.photos.map((photo) => (
       <figure class="rounded-xl overflow-hidden border border-stone-200 bg-white shadow-sm">
         <img
-          src={`${base}${photo.src.replace(/^\//, '')}`}
+          src={`${base}${photo.src}`}
           alt={photo.alt}
           class="w-full h-56 object-cover"
           loading="lazy"
