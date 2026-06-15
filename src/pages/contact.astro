@@ -1,5 +1,9 @@
 ---
 import PageLayout from '../components/PageLayout.astro';
+
+const site = import.meta.env.SITE.replace(/\/$/, '');
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const contactSuccessUrl = `${site}${base}/contact?sent=1`;
 ---
 
 <PageLayout
@@ -58,9 +62,9 @@ import PageLayout from '../components/PageLayout.astro';
         class="space-y-4"
         id="contact-form"
       >
-        <input type="hidden" name="_subject" value="Enquiry from dadarathornaninstitute.org" />
+        <input type="hidden" name="_subject" value="Enquiry from DAI website (GitHub preview)" />
         <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_next" value="https://dadarathornaninstitute.org/contact?sent=1" />
+        <input type="hidden" name="_next" value={contactSuccessUrl} />
 
         <div>
           <label for="Name" class="block text-sm font-medium text-stone-700 mb-1">Name <span class="text-red-500">*</span></label>

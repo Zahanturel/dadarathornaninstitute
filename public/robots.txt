@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dadarathornaninstitute.org/sitemap/
 Sitemap: https://zahanturel.github.io/dadarathornaninstitute/sitemap/

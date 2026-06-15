@@ -1,7 +1,8 @@
 # DAI Website — Review Guide (June 2026)
 
-**Preview URL:** https://zahanturel.github.io/dadarathornaninstitute/  
-**Custom domain:** https://dadarathornaninstitute.org
+**Preview URL (current):** https://zahanturel.github.io/dadarathornaninstitute/
+
+**Custom domain:** `dadarathornaninstitute.org` — not connected yet; still serving an older site until transfer. Deploy pipeline publishes to GitHub Pages only.
 
 This document summarizes what changed for review by the site owner and Er. Dr. Ramiyar P. Karanjia.
 
