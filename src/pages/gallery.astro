@@ -10,21 +10,30 @@ const gallery = getGallery();
   title="Photo Gallery"
   description="Photographs of the Dadar Athornan Institute — building, campus, and historical images."
   pageTitle="Photo Gallery"
-  pageSubtitle="The Institute through the years"
+  pageSubtitle="Building, students, and ceremonies through the decades"
 >
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-    {gallery.photos.map((photo) => (
-      <figure class="rounded-xl overflow-hidden border border-stone-200 bg-white shadow-sm">
-        <img
-          src={`${base}${photo.src}`}
-          alt={photo.alt}
-          class="w-full h-56 object-cover"
-          loading="lazy"
-          width="600"
-          height="224"
-        />
-        <figcaption class="px-4 py-3 text-sm text-stone-600">{photo.caption}</figcaption>
-      </figure>
+  <div class="space-y-12">
+    {gallery.sections.map((section) => (
+      <section>
+        <h2 class="font-serif text-xl font-semibold mb-5 pb-2 border-b border-stone-200" style="color: #162d4a;">
+          {section.title}
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {section.photos.map((photo) => (
+            <figure class="rounded-xl overflow-hidden border border-stone-200 bg-white shadow-sm">
+              <img
+                src={`${base}${photo.src}`}
+                alt={photo.alt}
+                class="w-full h-56 object-cover"
+                loading="lazy"
+                width="600"
+                height="224"
+              />
+              <figcaption class="px-4 py-3 text-sm text-stone-600">{photo.caption}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
     ))}
   </div>
 </PageLayout>

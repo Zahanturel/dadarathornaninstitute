@@ -1,11 +1,54 @@
 {
-  "photos": [
-    { "src": "/images/gallery/madressa-building.jpg", "alt": "Dadar Athornan Institute — Madressa building", "caption": "The Institute building, Dadar Parsi Colony" },
-    { "src": "/images/gallery/madressa-2.jpg", "alt": "Dadar Athornan Institute building", "caption": "Institute premises" },
-    { "src": "/images/gallery/madressa-main.jpg", "alt": "Dadar Athornan Institute", "caption": "Dadar Athornan Institute" },
-    { "src": "/images/gallery/institute-1.jpg", "alt": "Institute view", "caption": "Institute view" },
-    { "src": "/images/gallery/institute-2.jpg", "alt": "Institute view", "caption": "Institute campus" },
-    { "src": "/images/gallery/institute-3.jpg", "alt": "Institute view", "caption": "Institute campus" },
-    { "src": "/images/gallery/group-photo-1983.jpg", "alt": "Dadar Madressa Group Photo April 1983", "caption": "Dadar Madressa Group Photo — April 1983" }
+  "sections": [
+    {
+      "title": "The Building",
+      "photos": [
+        {
+          "src": "/images/gallery/madressa-building.jpg",
+          "alt": "Historical black-and-white photograph of the original Athornan Boarding Madressa building, Dadar",
+          "caption": "Original Madressa building — early photograph"
+        },
+        {
+          "src": "/images/gallery/madressa-2.jpg",
+          "alt": "Cream-coloured facade of Dadar Athornan Institute on Firdausi Road, Dadar Parsi Colony",
+          "caption": "Institute building today — main entrance, Firdausi Road"
+        }
+      ]
+    },
+    {
+      "title": "Students & Teachers",
+      "photos": [
+        {
+          "src": "/images/gallery/institute-2.jpg",
+          "alt": "Black-and-white photograph of students in white duglis with staff and teachers outside the Madressa",
+          "caption": "Students with staff and teachers in the early years"
+        },
+        {
+          "src": "/images/gallery/institute-1.jpg",
+          "alt": "Vintage sepia group portrait of students and teachers on the Madressa balcony",
+          "caption": "Students and teachers — vintage group portrait"
+        },
+        {
+          "src": "/images/gallery/institute-3.jpg",
+          "alt": "Group portrait of students and senior teachers, photograph by Rashid D. Bamanbehram",
+          "caption": "Students and senior teachers (Photo: Rashid D. Bamanbehram)"
+        },
+        {
+          "src": "/images/gallery/group-photo-1983.jpg",
+          "alt": "Group photograph of Dadar Madressa students, April 1983",
+          "caption": "Dadar Madressa group photo — April 1983"
+        }
+      ]
+    },
+    {
+      "title": "Institute Life Today",
+      "photos": [
+        {
+          "src": "/images/gallery/madressa-main.jpg",
+          "alt": "Students and faculty in traditional priestly dress at an Institute gathering on stage",
+          "caption": "Students and faculty at an Institute ceremony"
+        }
+      ]
+    }
   ]
 }
