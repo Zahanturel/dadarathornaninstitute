@@ -15,7 +15,7 @@ const studentData = getStudentList(currentYear);
 >
   <div class="space-y-8">
     <div class="text-center">
-      <h2 class="font-serif text-xl font-semibold mb-1" style="color: #162d4a;">
+      <h2 class="font-serif text-xl font-semibold mb-1 text-institute-900">
         List of Students of Dadar Athornan Institute
       </h2>
       <p class="text-stone-500 text-sm">{studentData.schoolLabel}</p>
@@ -26,7 +26,7 @@ const studentData = getStudentList(currentYear);
       <div class="overflow-x-auto rounded-xl border border-stone-200 shadow-sm">
         <table class="w-full text-sm">
           <thead>
-            <tr style="background-color: #162d4a; color: white;">
+            <tr class="table-header">
               <th class="px-4 py-3 text-left font-medium w-14">No.</th>
               <th class="px-4 py-3 text-left font-medium">Name</th>
               <th class="px-4 py-3 text-center font-medium w-24">Std.</th>
@@ -34,7 +34,7 @@ const studentData = getStudentList(currentYear);
           </thead>
           <tbody>
             {studentData.students.map((s, i) => (
-              <tr class={`border-b border-stone-100 ${i % 2 === 0 ? 'bg-white' : 'bg-stone-50'} hover:bg-amber-50 transition-colors`}>
+              <tr class={`border-b border-stone-100 ${i % 2 === 0 ? 'bg-white' : 'bg-stone-50'} hover:bg-terracotta-50 transition-colors`}>
                 <td class="px-4 py-3 text-stone-500 font-medium">{s.no}.</td>
                 <td class="px-4 py-3 font-medium text-stone-800">{s.name}</td>
                 <td class="px-4 py-3 text-center">
@@ -53,8 +53,7 @@ const studentData = getStudentList(currentYear);
         href={`${base}/dai_alumni_complete_list_jul_12.xls`}
         target="_blank"
         rel="noopener"
-        class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium text-white transition-all hover:opacity-90"
-        style="background-color: #162d4a;"
+        class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium text-white transition-all hover:opacity-90 bg-institute-900"
       >
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />

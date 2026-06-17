@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply bg-cream-50 text-stone-700 font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif text-institute-900 tracking-tight;
+  }
+
+  ::selection {
+    @apply bg-terracotta-200 text-institute-950;
+  }
+}
+
+@layer components {
+  .page-hero {
+    @apply py-12 sm:py-14 px-4 bg-gradient-to-br from-institute-950 via-institute-900 to-institute-800;
+  }
+
+  .page-hero-title {
+    @apply text-cream-50 font-serif text-3xl sm:text-4xl font-semibold text-center leading-tight;
+  }
+
+  .page-hero-subtitle {
+    @apply mt-3 text-cream-200/90 text-sm sm:text-base text-center max-w-2xl mx-auto leading-relaxed;
+  }
+
+  .section-title {
+    @apply font-serif text-2xl sm:text-3xl font-semibold text-institute-900;
+  }
+
+  .section-rule {
+    @apply w-14 h-0.5 bg-terracotta-500 rounded-full;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl font-medium text-white bg-terracotta-600 hover:bg-terracotta-700 active:bg-terracotta-700 transition-colors duration-200 shadow-soft;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium border border-stone-300/90 text-institute-800 bg-white hover:bg-cream-100 hover:border-stone-400 transition-colors duration-200;
+  }
+
+  .card {
+    @apply p-6 sm:p-7 rounded-2xl border border-stone-200/70 bg-white shadow-soft hover:shadow-card transition-all duration-300;
+  }
+
+  .card-interactive {
+    @apply card hover:-translate-y-0.5 hover:border-stone-300;
+  }
+
+  .card-featured {
+    @apply card-interactive border-terracotta-200/80 bg-gradient-to-br from-terracotta-50/80 to-cream-50 ring-1 ring-terracotta-200/40;
+  }
+
+  .link-accent {
+    @apply text-terracotta-600 font-medium hover:text-terracotta-700 underline-offset-2 hover:underline transition-colors;
+  }
+
+  .table-header {
+    @apply bg-institute-900 text-cream-50;
+  }
+
+  .prose-institute {
+    @apply text-stone-700 leading-relaxed space-y-5 text-[1.0625rem] leading-[1.8];
+  }
+
+  .prose-institute strong {
+    @apply text-institute-900 font-semibold;
+  }
+
+  .stat-value {
+    @apply font-serif text-4xl sm:text-5xl font-semibold text-terracotta-400 tabular-nums;
+  }
+
+  .stat-label {
+    @apply text-cream-200/70 text-sm mt-2 tracking-wide;
+  }
+
+  .nav-link {
+    @apply px-3 py-2 rounded-lg text-sm font-medium text-cream-200/90 hover:text-cream-50 hover:bg-white/10 transition-colors duration-150;
+  }
+
+  .nav-link-active {
+    @apply nav-link text-terracotta-300 bg-white/10;
+  }
+
+  .highlight-item {
+    @apply flex gap-4 text-[0.9375rem] text-stone-700 leading-relaxed py-2 border-b border-stone-200/60 last:border-0;
+  }
+
+  .highlight-dot {
+    @apply flex-shrink-0 mt-2 w-2 h-2 rounded-full bg-terracotta-500;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

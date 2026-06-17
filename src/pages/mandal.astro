@@ -27,36 +27,36 @@ const mandal = getMandal();
       </p>
     </div>
 
-    <div class="not-prose my-8 p-6 rounded-xl border-l-4 bg-stone-50 border border-stone-200" style="border-left-color: #b45309;">
-      <h3 class="font-serif text-lg font-semibold mb-3" style="color: #162d4a;">Supporting Young and Senior Priests</h3>
+    <div class="not-prose my-8 p-6 rounded-xl border-l-4 border-l-terracotta-500 bg-cream-50 border border-stone-200">
+      <h3 class="font-serif text-lg font-semibold mb-3 text-institute-900">Supporting Young and Senior Priests</h3>
       <p class="text-stone-700 text-sm leading-relaxed">{mandal.wzoSchemeNote}</p>
       <p class="text-stone-700 text-sm leading-relaxed mt-3">{mandal.seniorMobedsNote}</p>
     </div>
 
     <div class="not-prose grid md:grid-cols-2 gap-6 my-8">
       <div class="p-5 rounded-xl bg-stone-50 border border-stone-200">
-        <h3 class="font-serif text-base font-semibold mb-3" style="color: #162d4a;">Founders of Athornan Mandal</h3>
+        <h3 class="font-serif text-base font-semibold mb-3 text-institute-900">Founders of Athornan Mandal</h3>
         <ul class="text-sm text-stone-600 space-y-1">
           {mandal.founders.map((name) => <li>{name}</li>)}
         </ul>
       </div>
 
       <div class="p-5 rounded-xl bg-stone-50 border border-stone-200">
-        <h3 class="font-serif text-base font-semibold mb-3" style="color: #162d4a;">Past Presidents</h3>
+        <h3 class="font-serif text-base font-semibold mb-3 text-institute-900">Past Presidents</h3>
         <ul class="text-sm text-stone-600 space-y-1">
           {mandal.pastPresidents.map((name) => <li>{name}</li>)}
         </ul>
       </div>
 
       <div class="p-5 rounded-xl bg-stone-50 border border-stone-200">
-        <h3 class="font-serif text-base font-semibold mb-3" style="color: #162d4a;">Past Chairmen</h3>
+        <h3 class="font-serif text-base font-semibold mb-3 text-institute-900">Past Chairmen</h3>
         <ul class="text-sm text-stone-600 space-y-1">
           {mandal.pastChairmen.map((name) => <li>{name}</li>)}
         </ul>
       </div>
 
       <div class="p-5 rounded-xl bg-stone-50 border border-stone-200">
-        <h3 class="font-serif text-base font-semibold mb-3" style="color: #162d4a;">Past Hon. Secretaries</h3>
+        <h3 class="font-serif text-base font-semibold mb-3 text-institute-900">Past Hon. Secretaries</h3>
         <ul class="text-sm text-stone-600 space-y-1">
           {mandal.pastHonSecretaries.map((name) => <li>{name}</li>)}
         </ul>
@@ -64,7 +64,7 @@ const mandal = getMandal();
     </div>
 
     <div class="not-prose p-6 rounded-xl border border-stone-200 bg-stone-50">
-      <h3 class="font-serif text-lg font-semibold mb-4" style="color: #162d4a;">Board of Trustees</h3>
+      <h3 class="font-serif text-lg font-semibold mb-4 text-institute-900">Board of Trustees</h3>
       <div class="space-y-2 text-sm text-stone-700">
         {mandal.boardOfTrustees.map((t) => (
           <div class="flex gap-2 flex-wrap">

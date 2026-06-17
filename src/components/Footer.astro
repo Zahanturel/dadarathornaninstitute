@@ -2,43 +2,43 @@
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
-<footer style="background-color: #162d4a;" class="text-stone-300 mt-16">
-  <div class="max-w-7xl mx-auto px-4 py-12">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<footer class="bg-institute-950 text-cream-200/80 mt-20 border-t border-white/5">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
       <div>
-        <h3 class="text-white font-serif text-lg font-semibold mb-3">Dadar Athornan Institute</h3>
-        <p class="text-sm text-stone-400 leading-relaxed">
+        <h3 class="text-cream-50 font-serif text-lg font-semibold mb-4">Dadar Athornan Institute</h3>
+        <p class="text-sm text-cream-200/60 leading-relaxed max-w-sm">
           Established 9th November 1919 by the Athornan Mandal. Providing scriptural, religious, and secular education to children of Parsi priests for over a century.
         </p>
       </div>
       <div>
-        <h3 class="text-white font-serif text-lg font-semibold mb-3">Contact</h3>
-        <address class="not-italic text-sm text-stone-400 space-y-1">
+        <h3 class="text-cream-50 font-serif text-lg font-semibold mb-4">Contact</h3>
+        <address class="not-italic text-sm text-cream-200/60 space-y-1 leading-relaxed">
           <p>651–52, Firdausi Road,</p>
           <p>Mancherji Joshi Parsi Colony,</p>
           <p>Dadar, Mumbai 400 014</p>
-          <p class="mt-2">Tel: +91-22-2413 8086</p>
+          <p class="mt-3">Tel: +91-22-2413 8086</p>
           <p>
-            <a href="mailto:info@dadarathornaninstitute.org" class="hover:text-amber-400 transition-colors" style="color: inherit;">
+            <a href="mailto:info@dadarathornaninstitute.org" class="text-cream-200/80 hover:text-terracotta-300 transition-colors">
               info@dadarathornaninstitute.org
             </a>
           </p>
         </address>
       </div>
       <div>
-        <h3 class="text-white font-serif text-lg font-semibold mb-3">Quick Links</h3>
-        <ul class="text-sm space-y-1">
-          <li><a href={`${base}/donate`} class="text-stone-400 hover:text-amber-400 transition-colors">Donate</a></li>
-          <li><a href={`${base}/admissions`} class="text-stone-400 hover:text-amber-400 transition-colors">Admissions</a></li>
-          <li><a href={`${base}/history`} class="text-stone-400 hover:text-amber-400 transition-colors">History</a></li>
-          <li><a href={`${base}/downloads`} class="text-stone-400 hover:text-amber-400 transition-colors">Downloads</a></li>
-          <li><a href={`${base}/contact`} class="text-stone-400 hover:text-amber-400 transition-colors">Contact</a></li>
-          <li><a href={`${base}/sitemap`} class="text-stone-400 hover:text-amber-400 transition-colors">Sitemap</a></li>
+        <h3 class="text-cream-50 font-serif text-lg font-semibold mb-4">Quick Links</h3>
+        <ul class="text-sm space-y-2">
+          <li><a href={`${base}/donate`} class="text-cream-200/60 hover:text-terracotta-300 transition-colors">Donate</a></li>
+          <li><a href={`${base}/admissions`} class="text-cream-200/60 hover:text-terracotta-300 transition-colors">Admissions</a></li>
+          <li><a href={`${base}/history`} class="text-cream-200/60 hover:text-terracotta-300 transition-colors">History</a></li>
+          <li><a href={`${base}/downloads`} class="text-cream-200/60 hover:text-terracotta-300 transition-colors">Downloads</a></li>
+          <li><a href={`${base}/contact`} class="text-cream-200/60 hover:text-terracotta-300 transition-colors">Contact</a></li>
+          <li><a href={`${base}/sitemap`} class="text-cream-200/60 hover:text-terracotta-300 transition-colors">Sitemap</a></li>
         </ul>
       </div>
     </div>
 
-    <div class="border-t border-white/10 mt-8 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-stone-500">
+    <div class="border-t border-white/10 mt-10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-cream-200/40">
       <p>&copy; {new Date().getFullYear()} Dadar Athornan Institute. All rights reserved.</p>
       <p>Athornan Mandal · Mumbai, India</p>
     </div>

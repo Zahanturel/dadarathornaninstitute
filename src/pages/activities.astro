@@ -15,8 +15,8 @@ const years = getActivities();
   <div class="space-y-3">
     {years.map((y, i) => (
       <details class="group rounded-xl border border-stone-200 overflow-hidden" open={i === 0}>
-        <summary class="flex items-center justify-between px-5 py-4 cursor-pointer select-none transition-colors hover:bg-stone-50" style={i === 0 ? 'background-color: rgba(22,45,74,0.05);' : ''}>
-          <span class="font-serif text-lg font-semibold" style="color: #162d4a;">{y.year}</span>
+        <summary class={`flex items-center justify-between px-5 py-4 cursor-pointer select-none transition-colors hover:bg-cream-100 ${i === 0 ? 'bg-institute-50' : ''}`}>
+          <span class="font-serif text-lg font-semibold text-institute-900">{y.year}</span>
           <span class="text-stone-400 group-open:rotate-180 transition-transform duration-200">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -27,7 +27,7 @@ const years = getActivities();
           <ul class="space-y-2">
             {y.items.map((item) => (
               <li class="flex gap-3 text-sm text-stone-700 leading-relaxed">
-                <span class="flex-shrink-0 mt-1.5 w-1.5 h-1.5 rounded-full" style="background-color: #b45309;"></span>
+                <span class="flex-shrink-0 mt-1.5 w-1.5 h-1.5 rounded-full bg-terracotta-600"></span>
                 <span>{item}</span>
               </li>
             ))}
@@ -38,6 +38,6 @@ const years = getActivities();
   </div>
 
   <div class="mt-10 p-5 rounded-xl bg-stone-50 border border-stone-200 text-sm text-stone-600">
-    <p>For syllabus documents and the alumni spreadsheet, see the <a href={`${base}/downloads`} class="font-medium hover:underline" style="color: #b45309;">Downloads</a> page.</p>
+    <p>For syllabus documents and the alumni spreadsheet, see the <a href={`${base}/downloads`} class="font-medium hover:underline text-terracotta-600">Downloads</a> page.</p>
   </div>
 </PageLayout>

@@ -14,7 +14,7 @@ const booksData = getBooks();
   <div class="overflow-x-auto rounded-xl border border-stone-200 shadow-sm">
     <table class="w-full text-sm">
       <thead>
-        <tr style="background-color: #162d4a; color: white;">
+        <tr class="table-header">
           <th class="px-4 py-3 text-left font-medium w-12">No.</th>
           <th class="px-4 py-3 text-left font-medium">Title</th>
           <th class="px-4 py-3 text-center font-medium w-28">Language</th>
@@ -23,7 +23,7 @@ const booksData = getBooks();
       </thead>
       <tbody>
         {booksData.books.map((book, i) => (
-          <tr class={`border-b border-stone-100 ${i % 2 === 0 ? 'bg-white' : 'bg-stone-50'} hover:bg-amber-50 transition-colors`}>
+          <tr class={`border-b border-stone-100 ${i % 2 === 0 ? 'bg-white' : 'bg-stone-50'} hover:bg-terracotta-50 transition-colors`}>
             <td class="px-4 py-3 text-stone-500 font-medium">{book.no}.</td>
             <td class="px-4 py-3 text-stone-800 font-medium">{book.title}</td>
             <td class="px-4 py-3 text-center">
@@ -33,7 +33,7 @@ const booksData = getBooks();
                 </span>
               )}
             </td>
-            <td class="px-4 py-3 text-right font-semibold" style="color: #b45309;">₹{book.price}/-</td>
+            <td class="px-4 py-3 text-right font-semibold text-terracotta-600">₹{book.price}/-</td>
           </tr>
         ))}
       </tbody>
@@ -48,8 +48,8 @@ const booksData = getBooks();
       To purchase books or enquire about availability, please contact the Institute directly.
     </p>
     <div class="flex flex-wrap gap-4 text-sm">
-      <a href="tel:+912224138086" class="font-medium hover:underline" style="color: #b45309;">+91-22-2413 8086</a>
-      <a href="mailto:info@dadarathornaninstitute.org" class="font-medium hover:underline" style="color: #b45309;">info@dadarathornaninstitute.org</a>
+      <a href="tel:+912224138086" class="font-medium hover:underline text-terracotta-600">+91-22-2413 8086</a>
+      <a href="mailto:info@dadarathornaninstitute.org" class="font-medium hover:underline text-terracotta-600">info@dadarathornaninstitute.org</a>
     </div>
   </div>
 </PageLayout>

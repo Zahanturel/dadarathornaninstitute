@@ -18,7 +18,7 @@ const education = getEducation();
     </div>
 
     <section>
-      <h2 class="font-serif text-2xl font-semibold mb-4" style="color: #162d4a;">Syllabus Downloads</h2>
+      <h2 class="font-serif text-2xl font-semibold mb-4 text-institute-900">Syllabus Downloads</h2>
       <div class="grid sm:grid-cols-3 gap-4">
         {education.syllabi.map((s) => (
           <a
@@ -35,11 +35,11 @@ const education = getEducation();
     </section>
 
     <section>
-      <h2 class="font-serif text-2xl font-semibold mb-4" style="color: #162d4a;">Seven-Year Scriptural Training</h2>
+      <h2 class="font-serif text-2xl font-semibold mb-4 text-institute-900">Seven-Year Scriptural Training</h2>
       <div class="overflow-x-auto rounded-xl border border-stone-200 shadow-sm">
         <table class="w-full text-sm">
           <thead>
-            <tr style="background-color: #162d4a; color: white;">
+            <tr class="table-header">
               <th class="px-4 py-2 text-left font-medium">Year</th>
               <th class="px-4 py-2 text-left font-medium">Texts Covered</th>
             </tr>
@@ -55,7 +55,7 @@ const education = getEducation();
         </table>
       </div>
       <p class="text-sm text-stone-500 mt-3">
-        For the full history of the education system, see <a href={`${base}/history`} class="hover:underline" style="color: #b45309;">History of the Institute</a>.
+        For the full history of the education system, see <a href={`${base}/history`} class="hover:underline text-terracotta-600">History of the Institute</a>.
       </p>
     </section>
   </div>

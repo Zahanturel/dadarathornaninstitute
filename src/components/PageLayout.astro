@@ -17,15 +17,15 @@ const { title, description, pageTitle, pageSubtitle } = Astro.props;
   <Header slot="header" />
 
   {pageTitle && (
-    <div class="py-10 px-4" style="background: linear-gradient(135deg, #162d4a 0%, #1e3a5f 60%, #0a1628 100%);">
-      <div class="max-w-4xl mx-auto text-center">
-        <h1 class="text-white font-serif text-3xl sm:text-4xl font-semibold">{pageTitle}</h1>
-        {pageSubtitle && <p class="mt-2 text-stone-300 text-sm sm:text-base">{pageSubtitle}</p>}
+    <div class="page-hero">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="page-hero-title">{pageTitle}</h1>
+        {pageSubtitle && <p class="page-hero-subtitle">{pageSubtitle}</p>}
       </div>
     </div>
   )}
 
-  <div class="max-w-4xl mx-auto px-4 py-10">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-12">
     <slot />
   </div>
 
