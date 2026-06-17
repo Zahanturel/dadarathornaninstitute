@@ -2,7 +2,6 @@
 import PageLayout from '../components/PageLayout.astro';
 import { getExStudents } from '../lib/data';
 
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const data = getExStudents();
 ---
 
@@ -37,9 +36,5 @@ const data = getExStudents();
         </tbody>
       </table>
     </div>
-
-    <p class="text-sm text-stone-500">
-      Legacy PDF list also available on the <a href={`${base}/downloads`} class="hover:underline" style="color: #b45309;">Downloads</a> page.
-    </p>
   </div>
 </PageLayout>

@@ -1,18 +1,17 @@
 ---
 import PageLayout from '../components/PageLayout.astro';
-import { getStudentList, getCurrentStudentYear, getArchivedStudentYears } from '../lib/data';
+import { getStudentList, getCurrentStudentYear } from '../lib/data';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const currentYear = getCurrentStudentYear();
 const studentData = getStudentList(currentYear);
-const archives = getArchivedStudentYears();
 ---
 
 <PageLayout
   title="Students"
   description={`Current list of students at Dadar Athornan Institute — academic year ${studentData.label}.`}
   pageTitle="Current Students"
-  pageSubtitle={studentData.label}
+  pageSubtitle={`List of Students (${currentYear.replace('-', '–')})`}
 >
   <div class="space-y-8">
     <div class="text-center">
@@ -20,24 +19,10 @@ const archives = getArchivedStudentYears();
         List of Students of Dadar Athornan Institute
       </h2>
       <p class="text-stone-500 text-sm">{studentData.schoolLabel}</p>
+      <p class="text-stone-400 text-xs mt-2">As provided by the Institute, June 2026</p>
     </div>
 
-    {archives.length > 0 && (
-      <div class="flex flex-wrap gap-2 justify-center text-sm">
-        <span class="text-stone-500">Archive:</span>
-        {archives.map((a) => (
-          <a
-            href={`${base}/students/${a.id}`}
-            class="px-3 py-1 rounded-full border border-stone-300 text-stone-600 hover:border-amber-600 hover:text-amber-700 transition-colors"
-          >
-            {a.label}
-          </a>
-        ))}
-      </div>
-    )}
-
     <section>
-      <h3 class="font-semibold text-stone-700 text-sm uppercase tracking-wide mb-3">School Students</h3>
       <div class="overflow-x-auto rounded-xl border border-stone-200 shadow-sm">
         <table class="w-full text-sm">
           <thead>
@@ -63,7 +48,7 @@ const archives = getArchivedStudentYears();
       <p class="text-right text-sm text-stone-500 mt-3 font-medium">Total: Fourteen ({studentData.total}) students</p>
     </section>
 
-    <div class="border-t border-stone-200 pt-6 flex flex-wrap gap-4">
+    <div class="border-t border-stone-200 pt-6">
       <a
         href={`${base}/dai_alumni_complete_list_jul_12.xls`}
         target="_blank"
@@ -75,18 +60,6 @@ const archives = getArchivedStudentYears();
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
         </svg>
         Alumni Complete List (XLS)
-      </a>
-      <a
-        href={`${base}/ex_students.pdf`}
-        target="_blank"
-        rel="noopener"
-        class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-all hover:opacity-90 border"
-        style="color: #162d4a; border-color: #162d4a;"
-      >
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-        </svg>
-        Ex-Students List (PDF)
       </a>
     </div>
   </div>

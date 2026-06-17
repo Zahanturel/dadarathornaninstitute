@@ -1,17 +1,9 @@
 {
   "downloads": [
     {
-      "category": "Institute Publications",
+      "category": "Alumni",
       "items": [
-        { "label": "Institute Brochure 2022 (PDF)", "href": "/brochure-2022.pdf", "external": true }
-      ]
-    },
-    {
-      "category": "Alumni & Students",
-      "items": [
-        { "label": "Alumni Complete List (XLS)", "href": "/dai_alumni_complete_list_jul_12.xls", "external": true },
-        { "label": "Alumni List (PDF)", "href": "/Alumni.pdf", "external": true },
-        { "label": "Ex-Students List (PDF — legacy)", "href": "/ex_students.pdf", "external": true }
+        { "label": "Alumni Complete List (XLS)", "href": "/dai_alumni_complete_list_jul_12.xls", "external": true }
       ]
     },
     {

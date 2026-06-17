@@ -11,34 +11,35 @@ const highlights = getLatestHighlights();
 <Layout title="Welcome" description="Dadar Athornan Institute — Established 1919. Training Zoroastrian priests and providing free education, boarding, and lodging to children of priestly families in Mumbai.">
   <Header slot="header" />
 
-  <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #162d4a 0%, #1e3a5f 60%, #0a1628 100%);">
-    <div class="absolute inset-0 opacity-20">
-      <img
-        src={`${base}/images/gallery/madressa-main.jpg`}
-        alt=""
-        class="w-full h-full object-cover"
-        aria-hidden="true"
-      />
-    </div>
-    <div class="relative max-w-5xl mx-auto px-4 py-16 sm:py-20">
+  <section class="relative overflow-hidden min-h-[28rem] sm:min-h-[32rem]">
+    <img
+      src={`${base}/images/gallery/madressa-2.jpg`}
+      alt=""
+      class="absolute inset-0 w-full h-full object-cover object-center"
+      aria-hidden="true"
+    />
+    <div class="absolute inset-0" style="background: linear-gradient(105deg, rgba(28,25,23,0.88) 0%, rgba(41,37,36,0.72) 45%, rgba(68,64,60,0.45) 100%);"></div>
+    <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(245,240,232,0.15) 0%, transparent 40%);"></div>
+    <div class="relative max-w-5xl mx-auto px-4 py-16 sm:py-24">
       <div class="flex flex-col lg:flex-row items-center gap-10">
         <div class="flex-shrink-0">
           <img
             src={`${base}/images/logo.jpg`}
             alt="Dadar Athornan Institute logo"
-            class="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover border-4 border-white/20 shadow-xl"
+            class="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover border-4 shadow-xl"
+            style="border-color: rgba(245,240,232,0.35);"
             width="160"
             height="160"
           />
         </div>
         <div class="text-center lg:text-left">
-          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium mb-4 text-amber-300" style="background-color: rgba(180,83,9,0.2); border: 1px solid rgba(180,83,9,0.4);">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium mb-4" style="background-color: rgba(180,83,9,0.25); border: 1px solid rgba(251,191,36,0.45); color: #fde68a;">
             Established 9th November 1919
           </div>
-          <h1 class="text-white font-serif text-4xl sm:text-5xl font-semibold leading-tight">
+          <h1 class="font-serif text-4xl sm:text-5xl font-semibold leading-tight" style="color: #faf7f2;">
             Dadar Athornan Institute
           </h1>
-          <p class="mt-4 text-stone-300 text-lg leading-relaxed max-w-xl">
+          <p class="mt-4 text-lg leading-relaxed max-w-xl" style="color: #e7e5e4;">
             Nurturing the next generation of Zoroastrian priests through scripture, ritual, and secular education — free of cost, in a home away from home.
           </p>
         </div>
@@ -60,7 +61,7 @@ const highlights = getLatestHighlights();
       </a>
       <a href={`${base}/downloads`} class="group p-6 rounded-xl border border-stone-200 bg-white hover:border-stone-400 hover:shadow-md transition-all">
         <h2 class="font-serif text-xl font-semibold mb-2" style="color: #162d4a;">Explore Archive</h2>
-        <p class="text-stone-600 text-sm leading-relaxed">History, alumni lists, annual reports, photos, and publications — all preserved online.</p>
+        <p class="text-stone-600 text-sm leading-relaxed">History, annual reports, photo gallery, syllabus, and alumni list — from Institute records.</p>
         <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium" style="color: #162d4a;">Browse archive →</span>
       </a>
     </div>

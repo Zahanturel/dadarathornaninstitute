@@ -8,7 +8,6 @@ import downloadsData from '../data/downloads.json';
 import educationData from '../data/education.json';
 import sscData from '../data/achievers/ssc.json';
 import nirangDinData from '../data/achievers/nirang-din.json';
-import students2324 from '../data/students/2023-24.json';
 import students2526 from '../data/students/2025-26.json';
 
 export interface StudentEntry {
@@ -63,8 +62,6 @@ const activityModules = import.meta.glob<{ default: ActivityYear }>(
 
 const YEAR_ORDER = [
   '2025–26', '2024–25', '2023–24', '2022–23', '2021–22',
-  '2019', '2018', '2017', '2016', '2015', '2014', '2013',
-  '2012', '2011', '2010', '2009', '2008',
 ];
 
 export function getBooks() {
@@ -108,8 +105,6 @@ export function getNirangDinPerformers() {
 }
 
 export function getStudentList(year: string): StudentList {
-  if (year === '2025-26' || year === '2025–26') return students2526 as StudentList;
-  if (year === '2023-24' || year === '2023–24') return students2324 as StudentList;
   return students2526 as StudentList;
 }
 
@@ -118,7 +113,7 @@ export function getCurrentStudentYear() {
 }
 
 export function getArchivedStudentYears() {
-  return [{ id: '2023-24', label: '2023–24' }];
+  return [];
 }
 
 export function getActivities(): ActivityYear[] {
