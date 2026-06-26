@@ -1,0 +1,22 @@
+{
+  "year": "2026-27",
+  "label": "Academic year 2026–27",
+  "schoolLabel": "D.P.Y.A. High School students — academic year 2026–27",
+  "students": [
+    { "no": 1, "name": "Miran Zubin Engineer", "std": "II" },
+    { "no": 2, "name": "Mizan Zubin Engineer", "std": "II" },
+    { "no": 3, "name": "Shaahveer Hooman Katila", "std": "II" },
+    { "no": 4, "name": "Ahurem Arasp MinocherHomji", "std": "II" },
+    { "no": 5, "name": "Jahaun Porus Sinor", "std": "III" },
+    { "no": 6, "name": "Pashaang Daraius Karanjia", "std": "VII" },
+    { "no": 7, "name": "Delyaz Marzban Panthaky", "std": "VII" },
+    { "no": 8, "name": "Kaiwan Kurush Sidhwa", "std": "VII" },
+    { "no": 9, "name": "Huzan Zubin Engineer", "std": "VIII" },
+    { "no": 10, "name": "Ziyan Zubin Nalladaru", "std": "IX" },
+    { "no": 11, "name": "Shahan Hoshang Bhesadia", "std": "X" },
+    { "no": 12, "name": "Maidyarem Kaizad Chinoy", "std": "X" },
+    { "no": 13, "name": "Zhian Meherzad Turel", "std": "XI" },
+    { "no": 14, "name": "Syamak Rumi Sanjana", "std": "CFA" }
+  ],
+  "total": 14
+}

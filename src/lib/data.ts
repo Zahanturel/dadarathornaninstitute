@@ -9,6 +9,7 @@ import educationData from '../data/education.json';
 import sscData from '../data/achievers/ssc.json';
 import nirangDinData from '../data/achievers/nirang-din.json';
 import students2526 from '../data/students/2025-26.json';
+import students2627 from '../data/students/2026-27.json';
 
 export interface StudentEntry {
   no: number;
@@ -105,11 +106,12 @@ export function getNirangDinPerformers() {
 }
 
 export function getStudentList(year: string): StudentList {
+  if (year === '2026-27') return students2627 as StudentList;
   return students2526 as StudentList;
 }
 
 export function getCurrentStudentYear() {
-  return '2025-26';
+  return '2026-27';
 }
 
 export function getArchivedStudentYears() {
