@@ -3,21 +3,46 @@
     {
       "category": "Alumni",
       "items": [
-        { "label": "Alumni Complete List (PDF)", "href": "/dai_alumni_complete_list.pdf", "external": true }
+        {
+          "label": "Alumni Complete List — Student’s Register 1919 to June 2026 (PDF)",
+          "href": "/dai_alumni_complete_list.pdf",
+          "external": true
+        },
+        {
+          "label": "Alumni Complete List — Student’s Register 1919 to June 2026 (XLS)",
+          "href": "/dai_alumni_complete_list.xls",
+          "external": true
+        }
       ]
     },
     {
       "category": "Notices",
       "items": [
-        { "label": "Notice: FCRA Account Change from July 2021 (PDF)", "href": "/Notice-Change in FCRA Account number from July 2021.pdf", "external": true }
+        {
+          "label": "Notice: FCRA Account Change from July 2021 (PDF)",
+          "href": "/Notice-Change in FCRA Account number from July 2021.pdf",
+          "external": true
+        }
       ]
     },
     {
       "category": "Syllabus",
       "items": [
-        { "label": "Syllabus — Bhantar (DOC)", "href": "/downloads/syllabus/Syllabus-Bhantar.DOC", "external": true },
-        { "label": "Syllabus — Iranian History (DOC)", "href": "/downloads/syllabus/Syllabus-Iranian-History.DOC", "external": true },
-        { "label": "Syllabus — Zoroastrian Religion (DOC)", "href": "/downloads/syllabus/Syllabus-Zoroastrian-Religion.DOC", "external": true }
+        {
+          "label": "Syllabus — Bhantar (DOC)",
+          "href": "/downloads/syllabus/Syllabus-Bhantar.DOC",
+          "external": true
+        },
+        {
+          "label": "Syllabus — Iranian History (DOC)",
+          "href": "/downloads/syllabus/Syllabus-Iranian-History.DOC",
+          "external": true
+        },
+        {
+          "label": "Syllabus — Zoroastrian Religion (DOC)",
+          "href": "/downloads/syllabus/Syllabus-Zoroastrian-Religion.DOC",
+          "external": true
+        }
       ]
     }
   ]
