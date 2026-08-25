@@ -96,6 +96,34 @@ would need Ramiyar sir's confirmation — see §5.
 
 ---
 
+## 1a. How SSC results are filed on this page
+
+A boy in Std X during academic year Y sits the SSC examination in the February of
+Y+1, so **SSC N belongs to academic year (N-1)/N**:
+
+| SSC | Academic year sat | Student(s) |
+|---|---|---|
+| 2022 | 2021-22 | Karl Z. Sidhwa, Yazad J. Broacha, Fravash M. Gulestan |
+| 2023 | 2022-23 | Varzavand H. Dadachanji, Hormazd K. Fatakia |
+| 2024 | 2023-24 | Farsogar J. Bhesadia |
+| 2025 | 2024-25 | Sarosh K. Bharucha |
+| 2026 | 2025-26 | Zhian M. Turel |
+
+Each is corroborated independently: Karl's cohort left "after June 2022" per
+R2223 `[017]`, so they were Std X in 2021-22; Varzavand won a prize in November
+2022, so he was a 2022-23 student; Sarosh is absent from `students/2025-26.json`,
+so he left at the end of 2024-25; Zhian is Std X in `students/2025-26.json` and
+Std XI in `students/2026-27.json`.
+
+**Ramiyar sir writes an SSC result into whichever report he is typing when it
+arrives**, which lags it by a year — R2223 is headed "From June 2022 to May 2023"
+yet carries SSC 2022. Reproducing that lag would put two different SSC cohorts on
+a single year of this page. **Every SSC result is therefore filed under the year
+the boy sat the exam**, and each year carries exactly one cohort. The narrative
+sections stay where the verified rosters pin them (§1).
+
+---
+
 ## 2. Repeated events — genuine vs. copy-paste
 
 | Event | S1 | S2 | Verdict |
@@ -316,8 +344,9 @@ Ramiyar sir's instruction in `3b35400`; that content survives in git at
 ## 7. Verification
 
 `npm run build` passes — 17 pages, no errors. `/activities` renders 5 years in
-order (2025-26 → 2021-22), **111 items**: 2025-26 → 38, 2024-25 → 31, 2023-24 → 1,
-2022-23 → 27, 2021-22 → 14.
+order (2025-26 → 2021-22), **111 items**: 2025-26 → 37, 2024-25 → 31, 2023-24 → 2,
+2022-23 → 27, 2021-22 → 14. A scripted check confirms each year carries
+exactly one SSC cohort.
 
 A scripted check for identical lines leaves two, both intentional and both matching
 the source documents: **"Internal Bhantar exams in April and November"** (2024-25
