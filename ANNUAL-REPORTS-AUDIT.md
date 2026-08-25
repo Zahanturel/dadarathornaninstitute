@@ -24,7 +24,15 @@ first contains three report docs that were not in the folder originally used.
 **There is no 2023-24 report in either batch.** The reports go 2021-22, 2022-23,
 then straight to R24. The gap is real.
 
-Line references are non-empty-paragraph indices from `python-docx`.
+Line references are `python-docx` paragraph indices over the **full** paragraph
+list (blank paragraphs included, which is why the numbers skip). To reproduce:
+
+```python
+import docx
+for i, p in enumerate(docx.Document(PATH).paragraphs):
+    if p.text.strip():
+        print(f"[{i:03d}] {p.text.strip()}")
+```
 
 ---
 
