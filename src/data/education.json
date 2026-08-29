@@ -2,23 +2,53 @@
   "title": "Education & Syllabus",
   "intro": "Students receive complete training for priesthood and academic education up to S.S.C. at the D.P.Y.A. High School, along with religious knowledge, Iranian history and Bhantar meaning.",
   "syllabi": [
-    { "title": "Bhantar", "href": "/downloads/syllabus/Syllabus-Bhantar.DOC" },
-    { "title": "Iranian History", "href": "/downloads/syllabus/Syllabus-Iranian-History.DOC" },
-    { "title": "Zoroastrian Religion", "href": "/downloads/syllabus/Syllabus-Zoroastrian-Religion.DOC" }
+    {
+      "title": "Bhantar",
+      "href": "/downloads/syllabus/Syllabus-Bhantar.DOC"
+    },
+    {
+      "title": "Iranian History",
+      "href": "/downloads/syllabus/Syllabus-Iranian-History.DOC"
+    },
+    {
+      "title": "Zoroastrian Religion",
+      "href": "/downloads/syllabus/Syllabus-Zoroastrian-Religion.DOC"
+    }
   ],
   "curriculum": [
-    { "year": "Year 1 – Year 2 (first half)", "texts": "Khordeh Avesta in Gujarati script: Kasti prayers, Din-no-Kalmo, Jamvani Baj, 101 names of God, 30 roz, 12 mah, Hamkaras, Geh, Gahambars, Gathas, Sarosh Baj, Tandarosti, Hoshbam, 5 Geh, Patet Pashemani, 5 Nyaishnas, and more." },
-    { "year": "Year 2 (second half)", "texts": "Avestan script introduced; Yasna learning begins (up to Ha 10)." },
-    { "year": "Year 3", "texts": "Yasna Ha 11–34" },
-    { "year": "Year 4", "texts": "Yasna Ha 35–53" },
-    { "year": "Year 5", "texts": "Entire Yasna (to Ha 72); Visparad, supplementary texts, Afringans, various Baj" },
-    { "year": "Year 6", "texts": "Daily priestly rituals: Afringans, Afrins, Farokhshi, Jashan; Vendidad Fragard I–XII" },
-    { "year": "Year 7", "texts": "Vendidad Fragard XIII–XXII and allied prayers; readiness for Maratab" }
+    {
+      "year": "Year 1 – Year 2 (first half)",
+      "texts": "Khordeh Avesta in Gujarati script: Kasti prayers, Din-no-Kalmo, Jamvani Baj, 101 names of God, 30 roz, 12 mah, Hamkaras, Geh, Gahambars, Gathas, Sarosh Baj, Tandarosti, Hoshbam, 5 Geh, Patet Pashemani, 5 Nyaishnas, and more."
+    },
+    {
+      "year": "Year 2 (second half)",
+      "texts": "Avestan script introduced; Yasna learning begins (up to Ha 10)."
+    },
+    {
+      "year": "Year 3",
+      "texts": "Yasna Ha 11–34"
+    },
+    {
+      "year": "Year 4",
+      "texts": "Yasna Ha 35–53"
+    },
+    {
+      "year": "Year 5",
+      "texts": "Entire Yasna (to Ha 72); Visparad, supplementary texts, Afringans, various Baj"
+    },
+    {
+      "year": "Year 6",
+      "texts": "Daily priestly rituals: Afringans, Afrins, Farokhshi, Jashan; Vendidad Fragard I–XII"
+    },
+    {
+      "year": "Year 7",
+      "texts": "Vendidad Fragard XIII–XXII and allied prayers; readiness for Maratab"
+    }
   ],
   "latestHighlights": [
-    "SSC 2025: Sarosh K. Bharucha — 93.00% (LD)",
-    "Navar: Maidhyarem K. Chinoy (May 2025); Maratab: Berjis K. Bharda (May 2025)",
-    "New admissions 2025–26: Twins Miran & Mizan Zubin Engineer (Std. I, Pune)",
-    "Er. Zhian M. Turel selected Head Boy of DPYA High School (2025)"
+    "SSC 2026: Er. Zhian M. Turel — 84.00%",
+    "Navar: Maidhyarem K. Chinoy at Rustomframna Agyari, Dadar (12 May); Maratab: Berjis K. Bharda at Udwada (7 May)",
+    "New admissions 2025–26: twins Miran and Mizan Zubin Engineer (Std. I, from Pune)",
+    "Er. Zhian M. Turel selected Head Boy of DPYA High School and Mr. DPYA (Jul)"
   ]
 }
