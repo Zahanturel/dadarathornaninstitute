@@ -22,13 +22,28 @@ code linking them, so they drift silently and the homepage ends up contradicting
 the reports.
 
 **Whenever you change an activities file, audit `latestHighlights` in the same
-pass, and vice versa.** `latestHighlights` should reflect the newest academic
-year present in `activities/`. Check specifically:
+pass, and vice versa.**
 
-- the SSC line names the **latest** cohort;
+`latestHighlights` tracks the **current academic year** — the one
+`getCurrentStudentYear()` in `src/lib/data.ts` returns, i.e. the newest file in
+`src/data/students/`. That is *not* the same as the newest year in
+`activities/`, which is the last year Ramiyar sir has actually written a report
+for and normally lags a year behind. Getting these two confused is what put the
+previous year's admissions on the homepage.
+
+Check specifically:
+
+- the roster facts (new admissions, strength) come from the **current**
+  `students/` file — new admissions are the names in it that are absent from the
+  previous year's file;
+- the SSC line names the **latest** cohort in `achievers/ssc.json`;
 - names, standards and dates match the corresponding `activities/*.json` entry
   word for word;
-- no year is asserted that the source document does not actually state.
+- no year is asserted that the source document does not actually state;
+- nothing is carried over from a previous year that has silently gone stale —
+  a Head Boy who has since left school, a Navar or Maratab from an earlier year.
+  If there is no current-year source for a line, **drop it and ask**, rather
+  than leaving last year's in place.
 
 Before editing either one, read both, and say what you found in the other.
 
